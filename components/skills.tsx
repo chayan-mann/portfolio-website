@@ -25,7 +25,7 @@ export default function Skills() {
       title: "Database Management",
       description: "Designing and optimizing database structures",
       icon: <Database className="h-10 w-10 text-primary" />,
-      technologies: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Prisma", "SQL"],
+      technologies: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Prisma", "SQL", "MariaDB"],
     },
     
     {
