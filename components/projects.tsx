@@ -6,18 +6,18 @@ import { Button } from "@/components/ui/button"
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with product listings, shopping cart, and secure checkout process.",
+      title: "Progmatic",
+      description: "A full-stack competitive coding platform built with the MERN stack and TypeScript, featuring GitHub authentication, a real-time code editor, automated test case execution, contest registration.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Next.js", "Tailwind CSS", "Stripe", "MongoDB"],
+      technologies: ["React.js", "Tailwind CSS", "Node.js", "Judge0", "MongoDB"],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/chayan-mann/byte-progmatic",
     },
     {
-      title: "Task Management App",
-      description: "A productivity application for organizing tasks, setting deadlines, and tracking progress.",
+      title: "MAIT ERP",
+      description: "A comprehensive and modern College ERP system built with Next.js, Prisma and MariaDB that stream-lines academic and administrative processes.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["React", "Node.js", "Express", "PostgreSQL"],
+      technologies: ["NextJS", "Prisma", "MariaDB"],
       liveLink: "#",
       githubLink: "#",
     },
@@ -26,8 +26,8 @@ export default function Projects() {
       description: "A personal portfolio website showcasing projects and skills.",
       image: "/placeholder.svg?height=300&width=500",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://chayan-mann.vercel.app/",
+      githubLink: "https://github.com/chayan-mann/portfolio-website",
     },
   ]
 
