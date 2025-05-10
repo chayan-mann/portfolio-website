@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/port.png" type="image/png" />
+        <link rel="icon" href="/portfolio.jpeg" type="image/jpeg" />
       </head>
       <body>{children}</body>
     </html>
