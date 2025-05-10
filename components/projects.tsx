@@ -6,6 +6,16 @@ import { Button } from "@/components/ui/button"
 export default function Projects() {
   const projects = [
     {
+      title: "CaptionGen",
+      description:
+        "Video captioning tool that automatically generates accurate captions, made for personateAI website.",
+      image: "/images/personate.jpg",
+      technologies: [ "Python", "FastAPI", "MongoDB", "MongoEngine", "AWS", "CI/CD", "Docker"],
+      liveLink: "https://personate.ai/",
+      demoVideo: "#",
+      githubLink : "#"
+    },
+    {
       title: "ClientNest",
       description:
         "CRM Platform that enables customer segmentation, personalized campaign delivery, and intelligent insights using modern tools and approaches.",
