@@ -6,6 +6,16 @@ import { Button } from "@/components/ui/button"
 export default function Projects() {
   const projects = [
     {
+      title: "ClientNest",
+      description:
+        "CRM Platform that enables customer segmentation, personalized campaign delivery, and intelligent insights using modern tools and approaches.",
+      image: "/images/clientnest.jpg",
+      technologies: ["NextJS", "TailwindCSS", "Node.js", "MongoDB", "Redis", "GenAI","Google Auth"],
+      liveLink: "https://clientnest-crm.vercel.app",
+      demoVideo: "https://drive.google.com/file/d/1aK3A5pTvoI1wPy2PxBjrsLkiILPjd8VF/view", 
+      githubLink: "https://github.com/chayan-mann/ClientNest-CRM",
+    },
+    {
       title: "Fizzbuzz",
       description:
         "A developer-focused toolset built with the MERN stack for identifying hidden endpoints and vulnerabilities in web applications through intelligent web fuzzing and resolution techniques.",
