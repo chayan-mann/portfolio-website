@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ExternalLink, Github , Play} from "lucide-react"
+import { ExternalLink, Github, Play } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -10,19 +10,19 @@ export default function Projects() {
       description:
         "Video captioning tool that automatically generates accurate captions, made for personateAI website.",
       image: "/images/personate.jpg",
-      technologies: [ "Python", "FastAPI", "MongoDB", "MongoEngine", "AWS", "CI/CD", "Docker"],
+      technologies: ["Python", "FastAPI", "MongoDB", "MongoEngine", "AWS", "CI/CD", "Docker"],
       liveLink: "https://personate.ai/",
       demoVideo: "#",
-      githubLink : "#"
+      githubLink: "#",
     },
     {
       title: "ClientNest",
       description:
         "CRM Platform that enables customer segmentation, personalized campaign delivery, and intelligent insights using modern tools and approaches.",
       image: "/images/clientnest.jpg",
-      technologies: ["NextJS", "TailwindCSS", "Node.js", "MongoDB", "Redis", "GenAI","Google Auth"],
+      technologies: ["NextJS", "TailwindCSS", "Node.js", "MongoDB", "Redis", "GenAI", "Google Auth"],
       liveLink: "https://clientnest-crm.vercel.app",
-      demoVideo: "https://drive.google.com/file/d/1aK3A5pTvoI1wPy2PxBjrsLkiILPjd8VF/view", 
+      demoVideo: "https://drive.google.com/file/d/1aK3A5pTvoI1wPy2PxBjrsLkiILPjd8VF/view",
       githubLink: "https://github.com/chayan-mann/ClientNest-CRM",
     },
     {
@@ -69,7 +69,7 @@ export default function Projects() {
       description:
         "A decentralized health record management system that leverages blockchain smart contracts for secure and tamper-proof storage of patient data.",
       image: "/images/healthledger.jpg",
-      technologies: ["Blockchain","MetaMask", "Remix", "Web3.js", "Next.js", "FastAPI", "MongoDB", "GenAI"],
+      technologies: ["Blockchain", "MetaMask", "Remix", "Web3.js", "Next.js", "FastAPI", "MongoDB", "GenAI"],
       liveLink: "#",
       demoVideo: "#",
       githubLink: "https://github.com/chayan-mann/health-ledger",
@@ -85,14 +85,14 @@ export default function Projects() {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="overflow-hidden border-border hover:border-primary transition-colors bg-secondary/50"
+                className="overflow-hidden border-border hover:border-primary transition-colors bg-secondary/50 group"
               >
-                <div className="relative h-48 w-full">
+                <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                   />
                 </div>
                 <CardContent className="p-6">
