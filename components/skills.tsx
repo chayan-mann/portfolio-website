@@ -13,7 +13,7 @@ export default function Skills() {
       title: "Frontend Development",
       description: "Creating responsive and interactive user interfaces with modern frameworks",
       icon: <Layout className="h-10 w-10 text-primary" />,
-      technologies: ["React", "Next.js", "HTML5", "CSS3", "JavaScript", "TypeScript"],
+      technologies: ["React", "Next.js", "HTML5", "TailwindCSS", "JavaScript", "TypeScript"],
     },
     {
       title: "Backend Development",
@@ -25,7 +25,7 @@ export default function Skills() {
       title: "Database Management",
       description: "Designing and optimizing database structures",
       icon: <Database className="h-10 w-10 text-primary" />,
-      technologies: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Prisma", "SQL", "MariaDB"],
+      technologies: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Prisma", "SQL", "MariaDB", "Redis", "Kafka"],
     },
     
     {
@@ -38,7 +38,7 @@ export default function Skills() {
       title: "Data Analysis",
       description: "Extracting insights from data to drive decision-making",
       icon: <LineChart className="h-10 w-10 text-primary" />,
-      technologies: ["Python", "Pandas", "Data Visualization", "SQL", "Excel", "Tableau"],
+      technologies: ["Python","Numpy","Pandas", "Data Visualization", "SQL", "Excel", "Tableau"],
     },
   ]
 

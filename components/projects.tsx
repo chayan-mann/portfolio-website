@@ -1,47 +1,57 @@
 import Image from "next/image"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github , Play} from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function Projects() {
   const projects = [
     {
+      title: "Fizzbuzz",
+      description:
+        "A developer-focused toolset built with the MERN stack for identifying hidden endpoints and vulnerabilities in web applications through intelligent web fuzzing and resolution techniques.",
+      image: "/images/fizzbuzz.jpg",
+      technologies: ["React.js", "Node.js", "MongoDB", "commander"],
+      liveLink: "https://fizzbuzz-tekstatik.vercel.app",
+      demoVideo: "https://www.youtube.com/watch?v=IRNPbwBi-oE", // No demo video
+      githubLink: "https://github.com/IshaanMinocha/fizzbuzz_tekstatik",
+    },
+    {
       title: "Progmatic",
-      description: "A full-stack competitive coding platform built with the MERN stack and TypeScript, featuring GitHub authentication, a real-time code editor, automated test case execution, contest registration.",
+      description:
+        "A full-stack competitive coding platform built with the MERN stack and TypeScript, featuring GitHub authentication, a real-time code editor, automated test case execution, contest registration.",
       image: "/images/progmatic.jpeg",
       technologies: ["React.js", "Tailwind CSS", "Node.js", "Judge0", "MongoDB"],
       liveLink: "https://byte-progmatic.vercel.app",
+      demoVideo: "",
       githubLink: "https://github.com/chayan-mann/byte-progmatic",
     },
     {
       title: "MAIT ERP",
-      description: "A comprehensive and modern College ERP system built with Next.js, Prisma and MariaDB that stream-lines academic and administrative processes.",
+      description:
+        "A comprehensive and modern College ERP system built with Next.js, Prisma and MariaDB that stream-lines academic and administrative processes.",
       image: "/images/erp.jpg",
       technologies: ["NextJS", "Prisma", "MariaDB"],
       liveLink: "https://erp.ishaanminocha.in/",
+      demoVideo: "",
       githubLink: "https://github.com/bytemait/erp",
-    },
-    {
-      title: "Fizzbuzz",
-      description: "A developer-focused toolset built with the MERN stack for identifying hidden endpoints and vulnerabilities in web applications through intelligent web fuzzing and resolution techniques.",
-      image: "/images/fizzbuzz.jpg",
-      technologies: ["React.js", "Node.js", "MongoDB", "commander"],
-      liveLink: "https://fizzbuzz-tekstatik.vercel.app/",
-      githubLink: "https://github.com/IshaanMinocha/fizzbuzz_tekstatik",
     },
     {
       title: "d3ception",
       description: "A desktop application for generating 3d structures from 2d blueprint in offline environment",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/images/d3ception.jpg",
       technologies: ["React.js", "three.js", "Python", "Rust"],
       liveLink: "https://d3ception-tekstatik.vercel.app",
+      demoVideo: "https://www.youtube.com/watch?v=DGueSyr6_DQ",
       githubLink: "https://github.com/IshaanMinocha/d3ception_tekstatik",
     },
     {
       title: "Health Ledger",
-      description: "A decentralized health record management system that leverages blockchain smart contracts for secure and tamper-proof storage of patient data.",
-      technologies: ["MetaMask", "Remix", "Web3.js","Next.js", "FastAPI", "MongoDB", "GenAI"],
+      description:
+        "A decentralized health record management system that leverages blockchain smart contracts for secure and tamper-proof storage of patient data.",
+      image: "/images/healthledger.jpg",
+      technologies: ["Blockchain","MetaMask", "Remix", "Web3.js", "Next.js", "FastAPI", "MongoDB", "GenAI"],
       liveLink: "#",
+      demoVideo: "#",
       githubLink: "https://github.com/chayan-mann/health-ledger",
     },
   ]
@@ -58,7 +68,12 @@ export default function Projects() {
                 className="overflow-hidden border-border hover:border-primary transition-colors bg-secondary/50"
               >
                 <div className="relative h-48 w-full">
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -73,13 +88,21 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-4">
                     <Button size="sm" variant="outline" asChild>
                       <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
                       </a>
                     </Button>
+                    {project.demoVideo && (
+                      <Button size="sm" variant="outline" asChild>
+                        <a href={project.demoVideo} target="_blank" rel="noopener noreferrer">
+                          <Play className="h-4 w-4 mr-2" />
+                          Demo Video
+                        </a>
+                      </Button>
+                    )}
                     <Button size="sm" variant="outline" asChild>
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />

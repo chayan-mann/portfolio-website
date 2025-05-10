@@ -10,26 +10,13 @@ export default function Hero() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Hi, I'm{" "}
+            Hello, I'm{" "}
             <span className="text-primary inline-block min-w-[120px] md:min-w-[240px]">
               <TypeAnimation
                 sequence={[
-                  "Chayan Mann", // Type 'Your Name'
-                  1000, // Wait 1s
-                  "", // Delete 'Your Name'
-                  // 500, // Wait 0.5s
-                  // "John Doe", // Type 'John Doe'
-                  // 1000, // Wait 1s
-                  // "", // Delete 'John Doe'
-                  // 500, // Wait 0.5s
-                  // "a Developer", // Type 'a Developer'
-                  // 1000, // Wait 1s
-                  // "", // Delete 'a Developer'
-                  // 500, // Wait 0.5s
-                  // "a Designer", // Type 'a Designer'
-                  // 1000, // Wait 1s
-                  // "", // Delete 'a Designer'
-                  // 500, // Wait 0.5s
+                  "Chayan Mann", 
+                  1000, 
+                  "", 
                 ]}
                 wrapper="span"
                 cursor={true}

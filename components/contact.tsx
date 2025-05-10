@@ -1,9 +1,9 @@
 "use client"
 
 import type React from "react"
-
+import Link from "next/link"
 import { useState } from "react"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Linkedin} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -70,6 +70,14 @@ export default function Contact() {
                       <span>chayanmann09@gmail.com</span>
                     </div>
                     
+                    <div className="flex items-center">
+                      <Linkedin className="h-5 w-5 text-primary mr-4" />
+                      <span className="hover:text-blue-500">
+                        <Link href="https://www.linkedin.com/in/chayan-mann/" target="_blank" rel="noopener noreferrer">
+                          LinkedIn URL
+                        </Link>
+                      </span>
+                    </div>
                     <div className="flex items-center">
                       <MapPin className="h-5 w-5 text-primary mr-4" />
                       <span>Gurugram, Haryana</span>
