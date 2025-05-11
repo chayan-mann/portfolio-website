@@ -74,7 +74,7 @@ export default function Contact() {
                       <Linkedin className="h-5 w-5 text-primary mr-4" />
                       <span className="hover:text-blue-500">
                         <Link href="https://www.linkedin.com/in/chayan-mann/" target="_blank" rel="noopener noreferrer">
-                          LinkedIn URL
+                          chayan-mann
                         </Link>
                       </span>
                     </div>

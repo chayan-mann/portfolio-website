@@ -7,19 +7,19 @@ export default function Skills() {
       title: "Machine Learning",
       description: "Harnessing the power of data to drive intelligent solutions and innovate the future.",
       icon: <Bot className="h-10 w-10 text-primary" />,
-      technologies: ["scikit-learn", "PyTorch", "Tensorflow", "Langchain"],
+      technologies: ["scikit-learn", "PyTorch", "Tensorflow", "Langchain","Transformers", "GenAI"],
     },
     {
       title: "Frontend Development",
       description: "Creating responsive and interactive user interfaces with modern frameworks",
       icon: <Layout className="h-10 w-10 text-primary" />,
-      technologies: ["React", "Next.js", "HTML5", "TailwindCSS", "JavaScript", "TypeScript"],
+      technologies: ["JavaScript", "TypeScript", "HTML5", "TailwindCSS" ,"React", "Next.js"],
     },
     {
       title: "Backend Development",
       description: "Building robust server-side applications and APIs",
       icon: <Server className="h-10 w-10 text-primary" />,
-      technologies: ["Node.js", "Express", "Python", "FastAPI", "Django", "REST APIs"],
+      technologies: ["Node.js", "Express", "Python", "FastAPI", "Django", "Flask", "REST APIs"],
     },
     {
       title: "Database Management",
@@ -38,7 +38,7 @@ export default function Skills() {
       title: "Data Analysis",
       description: "Extracting insights from data to drive decision-making",
       icon: <LineChart className="h-10 w-10 text-primary" />,
-      technologies: ["Python","Numpy","Pandas", "Data Visualization", "SQL", "Excel", "Tableau"],
+      technologies: ["Python","Numpy","Pandas", "Data Visualization", "SQL", "Excel", "Tableau", "PowerBI"],
     },
   ]
 

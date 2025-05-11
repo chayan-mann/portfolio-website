@@ -1,10 +1,15 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import { ExternalLink, Github, Play } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function Projects() {
-  const projects = [
+  const [activeCategory, setActiveCategory] = useState("full-stack")
+
+  const mlProjects = [
     {
       title: "CaptionGen",
       description:
@@ -15,6 +20,50 @@ export default function Projects() {
       demoVideo: "#",
       githubLink: "#",
     },
+    {
+      title: "LeafLens",
+      description:
+        "This project aims to create an automated system using satellite and aerial imagery for accurate tree population assessment, focusing on tree density in targeted forest areas through the help of drones.",
+      image: "/images/leaflens.jpg",
+      technologies: ["NextJS", "Flask", "MySQL", "Python", "Tensorflow", "YOLO"],
+      liveLink: "#",
+      demoVideo: "#",
+      githubLink: "https://github.com/chayan-mann/code-cubicle",
+    },
+    {
+      title: "Smart Traffic Control System",
+      description:
+        "Research paper published on  how tomanage traffic smartly by intelligent signal control is significant challenge in urban traffic management.",
+      image: "/images/traffic.jpg",
+      technologies: ["PyGame", "Tensorflow", "Keras", "matplotlib"],
+      liveLink: "#",
+      demoVideo: "#",
+      githubLink: "https://github.com/chayan-mann/Smart-Traffic-Control",
+    },
+    {
+      title: "GenAI Chatbot",
+      description:
+        "This project has been created using Langchain and AWS Bedrock",
+      image: "/images/chatbot.jpg",
+      technologies: ["Python", "Langchain", "AWS Bedrock"],
+      liveLink: "#",
+      demoVideo: "#",
+      githubLink: "https://github.com/chayan-mann/chatbot-genAI",
+    },
+    {
+      title: "Carbon Emission",
+      description:
+        "In this project, I will analyze and visualize my dataset using SQL and PowerBi. I will use this dataset to discover some aspects: America's highest and lowest amount of carbon emission by Year",
+      image: "/images/data.png",
+      technologies: ["Python", "SQL", "PowerBI", "Excel", ".csv"],
+      liveLink: "#",
+      demoVideo: "#",
+      githubLink: "https://github.com/chayan-mann/Carbon-Emission-SQL-PowerBI",
+    },
+
+  ]
+
+  const fullStackProjects = [
     {
       title: "ClientNest",
       description:
@@ -32,7 +81,7 @@ export default function Projects() {
       image: "/images/fizzbuzz.jpg",
       technologies: ["React.js", "Node.js", "MongoDB", "commander"],
       liveLink: "https://fizzbuzz-tekstatik.vercel.app",
-      demoVideo: "https://www.youtube.com/watch?v=IRNPbwBi-oE", // No demo video
+      demoVideo: "https://www.youtube.com/watch?v=IRNPbwBi-oE",
       githubLink: "https://github.com/IshaanMinocha/fizzbuzz_tekstatik",
     },
     {
@@ -76,63 +125,97 @@ export default function Projects() {
     },
   ]
 
+  const ProjectCard = ({ project }: { project: any }) => (
+    <Card className="overflow-hidden border-border hover:border-primary transition-all duration-500 bg-secondary/50 group hover:shadow-[0_0_30px_rgba(var(--primary),0.2)] hover:-translate-y-2">
+      <div className="relative h-48 w-full overflow-hidden">
+        <Image
+          src={project.image || "/placeholder.svg"}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+        />
+      </div>
+      <CardContent className="p-6">
+        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+        <p className="text-muted-foreground mb-4">{project.description}</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.technologies.map((tech: string, techIndex: number) => (
+            <span
+              key={techIndex}
+              className="px-3 py-1 bg-background text-xs font-medium rounded-full border border-primary/30"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-4">
+          {project.liveLink && project.liveLink !== "#" && (
+          <Button size="sm" variant="outline" asChild>
+            <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Live Demo
+            </a>
+          </Button>
+          )}
+          {project.demoVideo && project.demoVideo !== "#" && (
+            <Button size="sm" variant="outline" asChild>
+              <a href={project.demoVideo} target="_blank" rel="noopener noreferrer">
+                <Play className="h-4 w-4 mr-2" />
+                Demo Video
+              </a>
+            </Button>
+          )}
+          <Button size="sm" variant="outline" asChild>
+            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+              <Github className="h-4 w-4 mr-2" />
+              Code
+            </a>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+
   return (
     <section id="projects" className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">My Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden border-border hover:border-primary transition-colors bg-secondary/50 group"
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Projects</h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+            I have been actively involved in several side projects, applying a range of technologies and concepts. Below is an overview of my recent and ongoing work
+          </p>
+
+          {/* Custom Category Tabs */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex p-1 rounded-xl bg-secondary/80 backdrop-blur-sm border border-border">
+              <button
+                onClick={() => setActiveCategory("full-stack")}
+                className={`px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  activeCategory === "full-stack"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-background text-xs font-medium rounded-full border border-primary/30"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex flex-wrap gap-4">
-                    <Button size="sm" variant="outline" asChild>
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
-                    {project.demoVideo && (
-                      <Button size="sm" variant="outline" asChild>
-                        <a href={project.demoVideo} target="_blank" rel="noopener noreferrer">
-                          <Play className="h-4 w-4 mr-2" />
-                          Demo Video
-                        </a>
-                      </Button>
-                    )}
-                    <Button size="sm" variant="outline" asChild>
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                Full Stack
+              </button>
+              <button
+                onClick={() => setActiveCategory("ml")}
+                className={`px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  activeCategory === "ml"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Data Science & ML
+              </button>
+            </div>
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {activeCategory === "full-stack"
+              ? fullStackProjects.map((project, index) => <ProjectCard key={index} project={project} />)
+              : mlProjects.map((project, index) => <ProjectCard key={index} project={project} />)}
           </div>
         </div>
       </div>
