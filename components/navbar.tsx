@@ -58,7 +58,7 @@ export default function Navbar() {
             </Link>
           ))}
           <ThemeToggle />
-          <Button>Resume</Button>
+          {/* <Button>Resume</Button> */}
         </nav>
 
         {/* Mobile Navigation Toggle */}
