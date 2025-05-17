@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Github, Twitter, Linkedin, Instagram, CodeXml } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -25,9 +25,10 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://x.com/chayan_mann"
                 className="h-10 w-10 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/30 transition-colors"
                 aria-label="Twitter"
+                target = "_blank"
               >
                 <Twitter className="h-5 w-5" />
               </Link>
@@ -38,12 +39,15 @@ export default function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link
-                href="#"
+
+                <Link
+                href="https://leetcode.com/u/chayan_mann/"
                 className="h-10 w-10 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/30 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
+                aria-label="LeetCode"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <CodeXml className="h-5 w-5" />
               </Link>
             </div>
           </div>
