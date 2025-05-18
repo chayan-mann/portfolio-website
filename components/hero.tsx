@@ -45,13 +45,13 @@ export default function Hero() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-48">
                 <DropdownMenuItem asChild className="cursor-pointer">
-                  <a href="https://drive.google.com/file/d/1xJk0ZishQ3eHBTQimHB3MQSf_Q6Frmf7/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <a href="https://drive.google.com/file/d/1tChFCngifR_t4LH6N391A8X1DTWdhjG3/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     <Code className="mr-2 h-4 w-4" />
                     <span>Web Dev Resume</span>
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="cursor-pointer">
-                  <a href="https://drive.google.com/file/d/1nAcOX1nCqqQPC0X30LxGdxrHvEzwptoa/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <a href="https://drive.google.com/file/d/1UT_WybdpD3ZlG_7Qjfe1yu3cRYjLVWIY/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     <Bot className="mr-2 h-4 w-4" />
                     <span>ML Resume</span>
                   </a>
