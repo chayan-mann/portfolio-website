@@ -1,9 +1,9 @@
 import Link from "next/link"
-import { Github, Twitter, Linkedin, Instagram, CodeXml } from "lucide-react"
+import { Github, Twitter, Linkedin} from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-muted/50 py-12">
+    <footer className="py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -12,7 +12,7 @@ export default function Footer() {
                 Portfolio
               </Link>
               <p className="text-muted-foreground mt-2 text-sm">
-                © {new Date().getFullYear()} Your Name. All rights reserved.
+                © {new Date().getFullYear()} Chayan Mann. All rights reserved.
               </p>
             </div>
             <div className="flex space-x-4">
@@ -39,7 +39,7 @@ export default function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
-
+{/* 
                 <Link
                 href="https://leetcode.com/u/chayan_mann/"
                 className="h-10 w-10 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/30 transition-colors"
@@ -47,8 +47,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-                <CodeXml className="h-5 w-5" />
-              </Link>
+                <CodeXml className="h-5 w-5" /> */}
+
+              {/* </Link> */}
             </div>
           </div>
         </div>

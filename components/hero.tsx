@@ -2,6 +2,8 @@
 import { ArrowDown, ChevronDown, Code, Bot, Github } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { TypeAnimation } from "react-type-animation";
+import { Badge } from "@/components/ui/badge"
+import { TechIcon } from "./tech-icon";
 import Image from "next/image";
 import {
   DropdownMenu,
@@ -11,6 +13,37 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function Hero() {
+  const tools = [
+    { name: "React.js", icon: "react" },
+    { name: "Next.js", icon: "nextjs" },
+    { name: "TailwindCSS", icon: "tailwind" },
+    { name: "Bootstrap", icon: "bootstrap" },
+    // { name: "C++", icon: "cpp" },
+    { name: "CSS", icon: "css" },
+    { name: "Python", icon: "python" },
+    { name: "Solidity", icon: "solidity" },
+    { name: "HTML", icon: "html5" },
+    { name: "Flask", icon: "flask" },
+    {name : "FastAPI", icon : "fastapi"},
+    {name : "Django", icon : "django"},
+    { name: "Arch Linux", icon: "archlinux" },
+    { name: "MongoDB", icon: "mongodb" },
+    {name : "SQL", icon : "sql"},
+    { name: "PostgreSQL", icon: "postgresql" },
+    { name: "Prisma", icon: "prisma" },
+    { name: "Node.js", icon: "nodejs" },
+    { name: "Firebase", icon: "firebase" },
+    { name: "TypeScript", icon: "typescript" },
+    { name: "Docker", icon: "docker" },
+    { name: "Git", icon: "git" },
+    { name: "AWS", icon: "aws" },
+    {name : "TensorFlow", icon : "tensorflow"},
+    {name : "PyTorch", icon : "pytorch"},
+    {name : "Langchain", icon : "langchain"},
+    {name : "Redis", icon : "redis"},
+    {name : "Kafka", icon : "kafka"},
+    {name : "Redux", icon : "redux"},
+  ]
   return (
     <>
       <section
@@ -154,6 +187,41 @@ export default function Hero() {
           </a>
         </div>
       </section>
+      {/* Tools Section */}
+      <section id="tools" className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 relative inline-block">
+            Tools that I have used
+            <span className="absolute -bottom-2 left-0 right-0 h-1 bg-primary"></span>
+            <svg className="absolute -bottom-4 left-0 w-full" height="10" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0,0 C100,20 200,0 300,10 C400,20 500,0 600,10 C700,20 800,0 900,10 C1000,20 1100,0 1200,10"
+                fill="none"
+                stroke="currentColor"
+                strokeOpacity="0.2"
+                strokeWidth="2"
+                className="text-primary"
+              />
+            </svg>
+          </h2>
+          <div className="relative overflow-hidden">
+            <div className="flex space-x-4 animate-scroll py-6 w-max">
+              {[...tools, ...tools].map((tool, index) => (
+                <Badge
+                  key={index}
+                  variant="secondary"
+                  className="py-2 px-4 text-base flex items-center gap-2 text-black bg-white backdrop-blur-sm hover:bg-white/30 transition-colors border border-white"
+
+                >
+                  <TechIcon name={tool.name} className="h-5 w-5" />
+                  {tool.name}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
