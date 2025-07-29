@@ -57,7 +57,7 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           {/* <Button>Resume</Button> */}
         </nav>
 
