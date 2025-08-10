@@ -23,7 +23,8 @@ import {
   FlaskConical,
   Globe,
   BarChart,
-  Layers
+  Layers,
+  Container
 } from "lucide-react"
 
 const techIconMap: { [key: string]: JSX.Element } = {
@@ -33,7 +34,7 @@ const techIconMap: { [key: string]: JSX.Element } = {
   MongoEngine: <Database className="h-4 w-4 text-green-600" />,
   AWS: <Cloud className="h-4 w-4 text-orange-400" />,
   "CI/CD": <GitFork className="h-4 w-4 text-purple-400" />,
-  Docker: <Settings className="h-4 w-4 text-blue-500" />,
+  Docker: <Container className="h-4 w-4 text-blue-500" />,
   MySQL: <Database className="h-4 w-4 text-blue-600" />,
   PostgreSQL: <Database className="h-4 w-4 text-sky-600" />,
   MariaDB: <Database className="h-4 w-4 text-blue-500" />,
@@ -55,7 +56,7 @@ const techIconMap: { [key: string]: JSX.Element } = {
   Blockchain: <GlobeLock className="h-4 w-4 text-sky-600" />,
   Supabase : <Cloud className="h-4 w-4 text-green-800"/>,
   Solidity: <Code className="h-4 w-4 text-sky-400" />,
-  Redux : <Layers className= "h-4 w-4 text-purple-800"/>,
+  Redux : <Layers className= "h-4 w-4 text-purple-800"/>
 }
 
 export default function Projects() {
@@ -121,7 +122,7 @@ export default function Projects() {
       description:
         "FanTune connects creators with their audience through music. Let your fans vote on songs and influence your stream's soundtrack in real-time with our revolutionary platform.",
       image: "/images/fantune.jpeg",
-      technologies: ["NextJS", "TailwindCSS", "PostgreSQL", "Prisma", "Supabase"],
+      technologies: ["NextJS", "TailwindCSS", "PostgreSQL", "Prisma", "Supabase", "Docker"],
       liveLink: "https://fantune.chayanmann.in",
       demoVideo: "",
       githubLink: "https://github.com/chayan-mann/fanTune",
