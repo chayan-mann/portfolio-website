@@ -1,8 +1,8 @@
 "use client";
-import { ArrowDown, ChevronDown, Code, Bot, Github } from "lucide-react"
+import { ArrowDown, ChevronDown, Code, Bot, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TypeAnimation } from "react-type-animation";
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 import { TechIcon } from "./tech-icon";
 import Image from "next/image";
 import {
@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const tools = [
@@ -24,11 +25,11 @@ export default function Hero() {
     { name: "Solidity", icon: "solidity" },
     { name: "HTML", icon: "html5" },
     { name: "Flask", icon: "flask" },
-    {name : "FastAPI", icon : "fastapi"},
-    {name : "Django", icon : "django"},
+    { name: "FastAPI", icon: "fastapi" },
+    { name: "Django", icon: "django" },
     { name: "Arch Linux", icon: "archlinux" },
     { name: "MongoDB", icon: "mongodb" },
-    {name : "SQL", icon : "sql"},
+    { name: "SQL", icon: "sql" },
     { name: "PostgreSQL", icon: "postgresql" },
     { name: "Prisma", icon: "prisma" },
     { name: "Node.js", icon: "nodejs" },
@@ -37,13 +38,13 @@ export default function Hero() {
     { name: "Docker", icon: "docker" },
     { name: "Git", icon: "git" },
     { name: "AWS", icon: "aws" },
-    {name : "TensorFlow", icon : "tensorflow"},
-    {name : "PyTorch", icon : "pytorch"},
-    {name : "Langchain", icon : "langchain"},
-    {name : "Redis", icon : "redis"},
-    {name : "Kafka", icon : "kafka"},
-    {name : "Redux", icon : "redux"},
-  ]
+    { name: "TensorFlow", icon: "tensorflow" },
+    { name: "PyTorch", icon: "pytorch" },
+    { name: "Langchain", icon: "langchain" },
+    { name: "Redis", icon: "redis" },
+    { name: "Kafka", icon: "kafka" },
+    { name: "Redux", icon: "redux" },
+  ];
   return (
     <>
       <section
@@ -58,9 +59,7 @@ export default function Hero() {
                 Hi, I'm{" "}
                 <span className="text-primary">
                   <TypeAnimation
-                    sequence={[
-                      "Chayan Mann",
-                    ]}
+                    sequence={["Chayan Mann"]}
                     wrapper="span"
                     cursor={true}
                   />
@@ -69,7 +68,7 @@ export default function Hero() {
               <p className="text-xl text-muted-foreground mb-8">
                 I'm a passionate full-stack developer and machine learning
                 enthusiast with a strong background in building scalable web
-                applications and implementing AI solutions.  <br />
+                applications and implementing AI solutions. <br />
                 I'm open to work, freelance and contribute.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -87,7 +86,7 @@ export default function Hero() {
                   <DropdownMenuContent align="center" className="w-48">
                     <DropdownMenuItem asChild className="cursor-pointer">
                       <a
-                        href="https://drive.google.com/file/d/1tChFCngifR_t4LH6N391A8X1DTWdhjG3/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1uxazMTSvAZU4OBbpLezpSjUIMZ6m90rk/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center"
@@ -98,7 +97,7 @@ export default function Hero() {
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild className="cursor-pointer">
                       <a
-                        href="https://drive.google.com/file/d/1UT_WybdpD3ZlG_7Qjfe1yu3cRYjLVWIY/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1uxazMTSvAZU4OBbpLezpSjUIMZ6m90rk/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center"
@@ -116,56 +115,96 @@ export default function Hero() {
               </div>
 
               <div className="flex gap-4 mt-8">
-                <Button variant="ghost" size="icon" asChild>
-                  <a
-                    href="https://github.com/chayan-mann"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
+                {/* GitHub */}
+                <motion.a
+                  href="https://github.com/chayan-mann"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-2xl bg-white shadow-md 
+                   hover:shadow-lg transition-all duration-300 group"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#181717" // GitHub black
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6"
                   >
-                    <Github className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button variant="ghost" size="icon" asChild>
-                  <a
-                    href="https://linkedin.com/in/chayan-mann"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
+                    <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.4.7-4.1-1.7-4.1-1.7a3.3 3.3 0 0 0-1.3-1.8c-1-.7.1-.7.1-.7a2.6 2.6 0 0 1 1.9 1.3 2.7 2.7 0 0 0 3.6 1 2.7 2.7 0 0 1 .8-1.7c-2.7-.3-5.6-1.4-5.6-6.1a4.7 4.7 0 0 1 1.2-3.3 4.4 4.4 0 0 1 .1-3.2s1-.3 3.4 1.2a11.4 11.4 0 0 1 6.2 0c2.3-1.5 3.4-1.2 3.4-1.2a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.3c0 4.7-2.9 5.8-5.6 6.1a3 3 0 0 1 .9 2.4v3.6c0 .3.2.7.8.6A12 12 0 0 0 12 .3" />
+                  </svg>
+                  <span className="hidden group-hover:inline text-sm font-medium text-gray-800">
+                    GitHub
+                  </span>
+                </motion.a>
+
+                {/* LinkedIn */}
+                <motion.a
+                  href="https://linkedin.com/in/chayan-mann"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-2xl bg-white shadow-md 
+                   hover:shadow-lg transition-all duration-300 group"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#0A66C2"
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                      <rect x="2" y="9" width="4" height="12"></rect>
-                      <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                  </a>
-                </Button>
-                <Button variant="ghost" size="icon" asChild>
-                  <a
-                    href="https://leetcode.com/u/chayan_mann"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LeetCode"
+                    <path d="M20.45 20.45h-3.6v-5.6c0-1.3 0-3-1.8-3s-2 1.4-2 2.9v5.7h-3.6V9h3.4v1.6h.1a3.7 3.7 0 0 1 3.4-1.9c3.7 0 4.4 2.4 4.4 5.4v6.4ZM5.34 7.43a2.08 2.08 0 1 1 0-4.16 2.08 2.08 0 0 1 0 4.16Zm1.8 13.02h-3.6V9h3.6v11.45Z" />
+                  </svg>
+                  <span className="hidden group-hover:inline text-sm font-medium text-gray-800">
+                    LinkedIn
+                  </span>
+                </motion.a>
+
+                {/* LeetCode */}
+                <motion.a
+                  href="https://leetcode.com/u/mann0907"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-2xl bg-white shadow-md 
+                   hover:shadow-lg transition-all duration-300 group"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5 w-5"
-                    >
-                      <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
-                    </svg>
-                  </a>
-                </Button>
+                    <path
+                      fill="#FFA116"
+                      d="M13.48 0a1.37 1.37 0 0 0-.96.44L7.12 6.23 3.27 10.36A5.26 5.26 0 0 0 2.06 12.47a5.53 5.53 0 0 0 .12 2.88 5.94 5.94 0 0 0 1.62 2.22l4.28 4.19c2.25 2.16 5.85 2.13 8.06-.07l2.4-2.39a1.38 1.38 0 1 0-1.95-1.95l-2.4 2.39a3 3 0 0 1-4.23.02L7.1 16.6c-.65-.64-.97-1.47-.95-2.26a2.68 2.68 0 0 1 .69-1.69l2.28-2.58c1.06-1.13 3.2-1.27 4.43-.28l3.5 2.83a1.38 1.38 0 0 0 1.73-2.15l-3.5-2.83a5.5 5.5 0 0 0-2.77-1.2l2.02-2.16A1.38 1.38 0 0 0 13.48 0Z"
+                    />
+                  </svg>
+                  <span className="hidden group-hover:inline text-sm font-medium text-gray-800">
+                    LeetCode
+                  </span>
+                </motion.a>
+
+                {/* Codeforces */}
+                <motion.a
+                  href="https://codeforces.com/profile/chayan_mann"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-2xl bg-white shadow-md 
+                   hover:shadow-lg transition-all duration-300 group"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6"
+                  >
+                    <rect x="3" y="4" width="4" height="16" fill="#FFD700" />
+                    <rect x="10" y="7" width="4" height="13" fill="#1E90FF" />
+                    <rect x="17" y="2" width="4" height="18" fill="#FF4500" />
+                  </svg>
+                  <span className="hidden group-hover:inline text-sm font-medium text-gray-800">
+                    Codeforces
+                  </span>
+                </motion.a>
               </div>
             </div>
             <div className="order-1 md:order-2 flex justify-center">
@@ -193,7 +232,11 @@ export default function Hero() {
           <h2 className="text-3xl font-bold mb-8 relative inline-block">
             Tools that I have used
             <span className="absolute -bottom-2 left-0 right-0 h-1 bg-primary"></span>
-            <svg className="absolute -bottom-4 left-0 w-full" height="10" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              className="absolute -bottom-4 left-0 w-full"
+              height="10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 d="M0,0 C100,20 200,0 300,10 C400,20 500,0 600,10 C700,20 800,0 900,10 C1000,20 1100,0 1200,10"
                 fill="none"
@@ -211,7 +254,6 @@ export default function Hero() {
                   key={index}
                   variant="secondary"
                   className="py-2 px-4 text-base flex items-center gap-2 text-black bg-white backdrop-blur-sm hover:bg-white/30 transition-colors border border-white"
-
                 >
                   <TechIcon name={tool.name} className="h-5 w-5" />
                   {tool.name}
@@ -221,7 +263,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

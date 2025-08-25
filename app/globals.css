@@ -118,9 +118,14 @@
   }
 }
 
+
 @layer utilities {
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 40s linear infinite;
+  }
+
+  .pause-animation {
+    animation-play-state: paused;
   }
 
   @keyframes scroll {
@@ -128,7 +133,10 @@
       transform: translateX(0);
     }
     100% {
+      /* This moves the container left by exactly half its width */
+      /* which is the length of the original (non-duplicated) list */
       transform: translateX(-50%);
     }
   }
 }
+
