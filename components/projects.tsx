@@ -153,7 +153,7 @@ export default function Projects() {
         "A full-stack competitive coding platform built with the MERN stack and TypeScript, featuring GitHub authentication, a real-time code editor, automated test case execution, contest registration.",
       image: "/images/progmatic.jpeg",
       technologies: ["React.js", "TailwindCSS", "Node.js", "Judge0", "MongoDB", "Redux"],
-      liveLink: "https://byte-progmatic.vercel.app",
+      liveLink: "https://progmatic.chayanmann.in/",
       demoVideo: "",
       githubLink: "https://github.com/chayan-mann/byte-progmatic",
     },
