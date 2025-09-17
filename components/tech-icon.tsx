@@ -21,7 +21,7 @@ const iconMap: Record<string, string> = {
   git: "/icons/git.svg",
   github: "/icons/github.svg",
   docker: "/icons/docker.svg",
-  aws: "/icons/amazonwebservices.svg",
+  aws: "/icons/aws.svg",
   python: "/icons/python.svg",
   django: "/icons/django.svg",
   flask: "/icons/flask.svg",
