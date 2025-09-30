@@ -129,16 +129,16 @@ export default function Projects() {
       demoVideo: "",
       githubLink: "https://github.com/chayan-mann/fanTune",
     },
-    {
-      title: "Worklium",
-      description:
-        "Worklium is a real-time collaborative Kanban platform that helps teams organize, track, and sync their work seamlessly",
-      image: "",
-      technologies: ["React.js", "Node.js","Redis", "PostgreSQL", "Supabase",  "Socket.io", "Docker"],
-      liveLink: "https://worklium.onrender.com/",
-      demoVideo: "",
-      githubLink: "https://github.com/chayan-mann/Worklium",
-    },
+    // {
+    //   title: "Worklium",
+    //   description:
+    //     "Worklium is a real-time collaborative Kanban platform that helps teams organize, track, and sync their work seamlessly",
+    //   image: "",
+    //   technologies: ["React.js", "Node.js","Redis", "PostgreSQL", "Supabase",  "Socket.io", "Docker"],
+    //   liveLink: "https://worklium.onrender.com/",
+    //   demoVideo: "",
+    //   githubLink: "https://github.com/chayan-mann/Worklium",
+    // },
     {
       title: "ClientNest",
       description:

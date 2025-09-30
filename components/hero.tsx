@@ -80,13 +80,21 @@ export default function Hero() {
                 I'm open to work, freelance and contribute.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild className="glow-effect hover:shadow-[0_0_25px_hsl(var(--primary))] transition-all duration-300">
+                <Button
+                  size="lg"
+                  asChild
+                  className="glow-effect hover:shadow-[0_0_25px_hsl(var(--primary))] transition-all duration-300"
+                >
                   <a href="#projects">View My Work</a>
                 </Button>
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button size="lg" variant="secondary" className="group neon-border hover:glow-effect transition-all duration-300">
+                    <Button
+                      size="lg"
+                      variant="secondary"
+                      className="group neon-border hover:glow-effect transition-all duration-300"
+                    >
                       Resume
                       <ChevronDown className="ml-2 h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
                     </Button>
@@ -117,7 +125,12 @@ export default function Hero() {
                   </DropdownMenuContent>
                 </DropdownMenu>
 
-                <Button size="lg" variant="outline" asChild className="neon-border hover:glow-effect transition-all duration-300">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
+                  className="neon-border hover:glow-effect transition-all duration-300"
+                >
                   <a href="#contact">Contact Me</a>
                 </Button>
               </div>
@@ -134,7 +147,7 @@ export default function Hero() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="#181717" // GitHub black
+                    fill="#ffffff" // GitHub white
                     viewBox="0 0 24 24"
                     className="h-6 w-6"
                   >
