@@ -234,7 +234,7 @@ export default function Hero() {
                 {/* Main border with neon effect */}
                 <div className="relative w-full h-full rounded-full border-2 border-primary/50 shadow-[0_0_30px_rgba(0,255,255,0.3)] pulse-glow">
                   <Image
-                    src="/hero-section.jpg"
+                    src="/hero-section.JPG"
                     alt="Profile"
                     fill
                     className="object-cover rounded-full"
