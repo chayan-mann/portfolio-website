@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { ExternalLink, Github, Play, Video } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Image from "next/image";
+import { ExternalLink, Github, Play, Video } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
   Database,
   Cpu,
@@ -26,7 +26,7 @@ import {
   Layers,
   Container,
   Unplug,
-} from "lucide-react"
+} from "lucide-react";
 
 const techIconMap: { [key: string]: JSX.Element } = {
   Python: <Code2 className="h-4 w-4 text-yellow-500" />,
@@ -48,21 +48,21 @@ const techIconMap: { [key: string]: JSX.Element } = {
   Excel: <FileText className="h-4 w-4 text-green-600" />,
   ".csv": <FileJson className="h-4 w-4 text-gray-400" />,
   TailwindCSS: <Code className="h-4 w-4 text-sky-400" />,
-  "NextJS": <Globe className="h-4 w-4 text-white" />,
+  NextJS: <Globe className="h-4 w-4 text-white" />,
   "React.js": <Globe className="h-4 w-4 text-blue-400" />,
   "Node.js": <Server className="h-4 w-4 text-green-500" />,
   Flask: <FlaskConical className="h-4 w-4 text-white" />,
   Rust: <Terminal className="h-4 w-4 text-orange-600" />,
   GenAI: <Brain className="h-4 w-4 text-fuchsia-500" />,
   Blockchain: <GlobeLock className="h-4 w-4 text-sky-600" />,
-  Supabase : <Cloud className="h-4 w-4 text-green-800"/>,
+  Supabase: <Cloud className="h-4 w-4 text-green-800" />,
   Solidity: <Code className="h-4 w-4 text-sky-400" />,
-  Redux : <Layers className= "h-4 w-4 text-purple-800"/>,
+  Redux: <Layers className="h-4 w-4 text-purple-800" />,
   "Socket.io": <Unplug className="h-4 w-4 text-green-500" />,
-}
+};
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState("full-stack")
+  const [activeCategory, setActiveCategory] = useState("full-stack");
 
   const mlProjects = [
     {
@@ -70,7 +70,15 @@ export default function Projects() {
       description:
         "Video captioning tool that automatically generates accurate captions, made for personateAI website.",
       image: "/images/personate.jpg",
-      technologies: ["Python", "FastAPI", "MongoDB", "MongoEngine", "AWS", "CI/CD", "Docker"],
+      technologies: [
+        "Python",
+        "FastAPI",
+        "MongoDB",
+        "MongoEngine",
+        "AWS",
+        "CI/CD",
+        "Docker",
+      ],
       liveLink: "https://personate.ai/",
       demoVideo: "#",
       githubLink: "#",
@@ -80,7 +88,14 @@ export default function Projects() {
       description:
         "This project aims to create an automated system using satellite and aerial imagery for accurate tree population assessment, focusing on tree density in targeted forest areas through the help of drones.",
       image: "/images/leaflens.jpg",
-      technologies: ["NextJS", "Flask", "MySQL", "Python", "Tensorflow", "YOLO"],
+      technologies: [
+        "NextJS",
+        "Flask",
+        "MySQL",
+        "Python",
+        "Tensorflow",
+        "YOLO",
+      ],
       liveLink: "#",
       demoVideo: "#",
       githubLink: "https://github.com/chayan-mann/code-cubicle",
@@ -115,8 +130,7 @@ export default function Projects() {
       demoVideo: "#",
       githubLink: "https://github.com/chayan-mann/Carbon-Emission-SQL-PowerBI",
     },
-
-  ]
+  ];
 
   const fullStackProjects = [
     {
@@ -124,7 +138,14 @@ export default function Projects() {
       description:
         "FanTune connects creators with their audience through music. Let your fans vote on songs and influence your stream's soundtrack in real-time with our revolutionary platform.",
       image: "/images/fantune.jpeg",
-      technologies: ["NextJS", "TailwindCSS", "PostgreSQL", "Prisma", "Supabase", "Docker"],
+      technologies: [
+        "NextJS",
+        "TailwindCSS",
+        "PostgreSQL",
+        "Prisma",
+        "Supabase",
+        "Docker",
+      ],
       liveLink: "https://fantune.chayanmann.in",
       demoVideo: "",
       githubLink: "https://github.com/chayan-mann/fanTune",
@@ -144,9 +165,17 @@ export default function Projects() {
       description:
         "CRM Platform that enables customer segmentation, personalized campaign delivery, and intelligent insights using modern tools and approaches.",
       image: "/images/clientnest.jpg",
-      technologies: ["NextJS", "TailwindCSS", "Node.js", "MongoDB", "Redis", "GenAI"],
+      technologies: [
+        "NextJS",
+        "TailwindCSS",
+        "Node.js",
+        "MongoDB",
+        "Redis",
+        "GenAI",
+      ],
       liveLink: "https://clientnest-crm.vercel.app",
-      demoVideo: "https://drive.google.com/file/d/1aK3A5pTvoI1wPy2PxBjrsLkiILPjd8VF/view",
+      demoVideo:
+        "https://drive.google.com/file/d/1aK3A5pTvoI1wPy2PxBjrsLkiILPjd8VF/view",
       githubLink: "https://github.com/chayan-mann/ClientNest-CRM",
     },
     {
@@ -164,7 +193,14 @@ export default function Projects() {
       description:
         "A full-stack competitive coding platform built with the MERN stack and TypeScript, featuring GitHub authentication, a real-time code editor, automated test case execution, contest registration.",
       image: "/images/progmatic.jpeg",
-      technologies: ["React.js", "TailwindCSS", "Node.js", "Judge0", "MongoDB", "Redux"],
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "Node.js",
+        "Judge0",
+        "MongoDB",
+        "Redux",
+      ],
       liveLink: "https://progmatic.chayanmann.in/",
       demoVideo: "",
       githubLink: "https://github.com/chayan-mann/byte-progmatic",
@@ -181,7 +217,8 @@ export default function Projects() {
     },
     {
       title: "d3ception",
-      description: "A desktop application for generating 3d structures from 2d blueprint in offline environment",
+      description:
+        "A desktop application for generating 3d structures from 2d blueprint in offline environment",
       image: "/images/d3ception.jpg",
       technologies: ["React.js", "three.js", "Python", "Rust"],
       liveLink: "https://d3ception-tekstatik.vercel.app",
@@ -193,108 +230,141 @@ export default function Projects() {
       description:
         "A decentralized health record management system that leverages blockchain smart contracts for secure and tamper-proof storage of patient data.",
       image: "/images/healthledger.jpg",
-      technologies: ["Blockchain", "MetaMask", "Solidity", "NextJS", "FastAPI", "MongoDB", "GenAI"],
+      technologies: [
+        "Blockchain",
+        "MetaMask",
+        "Solidity",
+        "NextJS",
+        "FastAPI",
+        "MongoDB",
+        "GenAI",
+      ],
       liveLink: "#",
       demoVideo: "#",
       githubLink: "https://github.com/chayan-mann/health-ledger",
     },
-  ]
+  ];
 
   const ProjectCard = ({ project }: { project: any }) => (
-  <Card className="flex flex-col justify-between overflow-hidden border-border transition-all duration-500 group relative
-                  bg-neutral-800/20 backdrop-filter backdrop-blur-lg
-                  hover:bg-neutral-700/30 hover:shadow-[0_0_40px_rgba(150,150,150,0.3)] hover:-translate-y-2">
-    {/* Image Section */}
-    <div className="relative h-48 w-full overflow-hidden">
-      <Image
-        src={project.image || "/placeholder.svg"}
-        alt={project.title}
-        fill
-        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-      />
-    </div>
-
-    {/* Card Content */}
-    <CardContent className="flex-1 p-6 flex flex-col">
-      <h3 className="text-xl font-semibold mb-2 text-center text-white">{project.title}</h3> {/* Added text-white for better contrast */}
-      <p className="text-neutral-300 mb-4 text-justify">{project.description}</p> {/* Adjusted text color */}
-
-      {/* Tech badges */}
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.technologies.map((tech: string, techIndex: number) => (
-          <span
-            key={techIndex}
-            className="flex items-center gap-2 px-3 py-1 bg-neutral-700/40 text-xs font-medium rounded-full border border-neutral-600 text-neutral-200" // Adjusted badge styles
-          >
-            {techIconMap[tech] || <Code2 className="h-4 w-4 text-gray-400" />}
-            {tech}
-          </span>
-        ))}
+    <Card
+      className="flex flex-col justify-between overflow-hidden transition-all duration-300 group relative
+                  bg-zinc-900/50 backdrop-blur-sm rounded-2xl border border-zinc-800 
+                  hover:border-zinc-700 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2"
+    >
+      {/* Image Section */}
+      <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 border-b border-zinc-800">
+        <Image
+          src={project.image || "/placeholder.svg"}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+        />
       </div>
-    </CardContent>
 
-    {/* Fixed Bottom Button Section */}
-    <div className="px-6 pb-6 pt-0 flex flex-wrap gap-4 items-center justify-center">
-      {project.liveLink && project.liveLink !== "#" && (
+      {/* Card Content */}
+      <CardContent className="flex-1 p-6 flex flex-col">
+        <h3 className="text-xl font-semibold mb-2 text-center text-white group-hover:text-primary transition-colors">
+          {project.title}
+        </h3>
+        <p className="text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+          {project.description}
+        </p>
+
+        {/* Tech badges */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.technologies.map((tech: string, techIndex: number) => (
+            <span
+              key={techIndex}
+              className="flex items-center gap-2 px-3 py-1 text-xs font-medium text-gray-300 bg-zinc-800/50 rounded-full border border-zinc-700/50 hover:border-primary/50 hover:text-primary hover:bg-zinc-800 transition-colors"
+            >
+              {techIconMap[tech] || <Code2 className="h-4 w-4 text-gray-400" />}
+              {tech}
+            </span>
+          ))}
+        </div>
+      </CardContent>
+
+      {/* Fixed Bottom Button Section */}
+      <div className="px-6 pb-6 pt-0 flex flex-wrap gap-3 items-center justify-center">
+        {project.liveLink && project.liveLink !== "#" && (
+          <Button
+            size="sm"
+            variant="outline"
+            asChild
+            className="rounded-full items-center bg-zinc-800/50 hover:bg-zinc-800 text-white border-zinc-700/50 hover:border-primary/50 transition-colors"
+          >
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ExternalLink className="h-4 w-4 mr-1" />
+              Live
+            </a>
+          </Button>
+        )}
+        {project.demoVideo && project.demoVideo !== "#" && (
+          <Button
+            size="sm"
+            variant="outline"
+            asChild
+            className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-white border-zinc-700/50 hover:border-primary/50 transition-colors"
+          >
+            <a
+              href={project.demoVideo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Video className="h-4 w-4 mr-1" />
+              Video
+            </a>
+          </Button>
+        )}
         <Button
           size="sm"
           variant="outline"
           asChild
-          className="rounded-full items-center bg-amber-900 hover:bg-amber-950 text-white border-amber-800" // Adjusted button styles
+          className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-white border-zinc-700/50 hover:border-primary/50 transition-colors"
         >
-          <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="h-4 w-4 mr-1" />
-            Live
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github className="h-4 w-4 mr-1" />
+            Code
           </a>
         </Button>
-      )}
-      {project.demoVideo && project.demoVideo !== "#" && (
-        <Button
-          size="sm"
-          variant="outline"
-          asChild
-          className="rounded-full bg-black hover:bg-gray-900 text-white border-gray-700" // Adjusted button styles
-        >
-          <a href={project.demoVideo} target="_blank" rel="noopener noreferrer">
-            <Video className="h-4 w-4 mr-1" />
-            Video
-          </a>
-        </Button>
-      )}
-      <Button
-        size="sm"
-        variant="outline"
-        asChild
-        className="rounded-full bg-blue-700 hover:bg-blue-800 text-white border-blue-600" // Adjusted button styles
-      >
-        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-          <Github className="h-4 w-4 mr-1" />
-          Code
-        </a>
-      </Button>
-    </div>
-  </Card>
-);
-
+      </div>
+    </Card>
+  );
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-gray-900"> {/* Added a dark gradient background */}
+    <section id="projects" className="py-20 md:py-28 bg-black">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Projects</h2> {/* Adjusted text color */}
-          <p className="text-neutral-300 text-center mb-12 max-w-3xl mx-auto"> {/* Adjusted text color */}
-            I have been actively involved in several side projects, applying a range of technologies and concepts. Below is an overview of my recent and ongoing work
-          </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                Projects
+              </span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              I have been actively involved in several side projects, applying a
+              range of technologies and concepts. Below is an overview of my
+              recent and ongoing work
+            </p>
+          </div>
 
           {/* Custom Category Tabs */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex p-1 rounded-xl bg-neutral-800/50 backdrop-blur-md border border-neutral-700"> {/* Adjusted tab container styles */}
+            <div className="inline-flex p-1 rounded-xl bg-zinc-900/50 backdrop-blur-sm border border-zinc-800">
               <button
                 onClick={() => setActiveCategory("full-stack")}
                 className={`px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeCategory === "full-stack"
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "text-neutral-300 hover:text-white" // Adjusted text color
+                    ? "bg-gradient-to-r from-primary to-purple-500 text-white shadow-lg"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 Full Stack
@@ -303,8 +373,8 @@ export default function Projects() {
                 onClick={() => setActiveCategory("ml")}
                 className={`px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeCategory === "ml"
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "text-neutral-300 hover:text-white" // Adjusted text color
+                    ? "bg-gradient-to-r from-primary to-purple-500 text-white shadow-lg"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 Data Science & ML
@@ -315,11 +385,15 @@ export default function Projects() {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {activeCategory === "full-stack"
-              ? fullStackProjects.map((project, index) => <ProjectCard key={index} project={project} />)
-              : mlProjects.map((project, index) => <ProjectCard key={index} project={project} />)}
+              ? fullStackProjects.map((project, index) => (
+                  <ProjectCard key={index} project={project} />
+                ))
+              : mlProjects.map((project, index) => (
+                  <ProjectCard key={index} project={project} />
+                ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

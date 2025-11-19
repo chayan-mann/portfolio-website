@@ -1,99 +1,101 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useMediaQuery } from "@/hooks/use-media-query"
-import { ThemeToggle } from "../components/theme-toggle"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Home, Briefcase, Code, Mail, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useMediaQuery } from "@/hooks/use-media-query";
+import { ThemeToggle } from "../components/theme-toggle";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const isDesktop = useMediaQuery("(min-width: 768px)")
+  const [scrolled, setScrolled] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setScrolled(true)
+        setScrolled(true);
       } else {
-        setScrolled(false)
+        setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  useEffect(() => {
-    if (isDesktop && isMenuOpen) {
-      setIsMenuOpen(false)
-    }
-  }, [isDesktop, isMenuOpen])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ]
+    { name: "Home", href: "#home", icon: Home },
+    { name: "Skills", href: "#skills", icon: Code },
+    { name: "Projects", href: "#projects", icon: Briefcase },
+    { name: "Contact", href: "#contact", icon: Mail },
+    {
+      name: "GitHub",
+      href: "https://github.com/chayan-mann",
+      icon: Github,
+      external: true,
+    },
+  ];
 
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-muted" : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold">
-          Chayan Mann
-        </Link>
+    <>
+      {/* Desktop Header */}
+      <header
+        className={`fixed top-0 w-full z-50 transition-all duration-300 hidden md:block ${
+          scrolled
+            ? "bg-background/90 backdrop-blur-md border-b border-muted"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold">
+            Chayan Mann
+          </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="text-sm font-medium hover:text-primary transition-colors">
-              {link.name}
-            </Link>
-          ))}
-          {/* <ThemeToggle /> */}
-          {/* <Button>Resume</Button> */}
-        </nav>
-
-        {/* Mobile Navigation Toggle */}
-        <div className="flex items-center md:hidden">
-          <ThemeToggle />
-          <Button
-            variant="ghost"
-            size="icon"
-            className="ml-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-secondary/90 backdrop-blur-md border-t border-muted">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          {/* Desktop Navigation */}
+          <nav className="flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium py-2 hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium hover:text-primary transition-colors"
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
               >
                 {link.name}
               </Link>
             ))}
-            <Button className="w-full">Resume</Button>
+            {/* <ThemeToggle /> */}
+            {/* <Button>Resume</Button> */}
+          </nav>
+        </div>
+      </header>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <div className="bg-zinc-900/95 backdrop-blur-md border border-zinc-800 rounded-full px-4 py-3 shadow-2xl shadow-primary/5">
+          <div className="flex items-center gap-2">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="flex items-center justify-center p-3 rounded-full hover:bg-zinc-800 transition-all duration-300 group relative"
+                  aria-label={link.name}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                >
+                  <Icon className="h-5 w-5 text-gray-400 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
+                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                    {link.name}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
-      )}
-    </header>
-  )
+      </nav>
+    </>
+  );
 }
