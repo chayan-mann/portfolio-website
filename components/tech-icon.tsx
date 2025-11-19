@@ -81,6 +81,7 @@ const iconMap: Record<string, string> = {
   sql: "/icons/mysql.svg",
   tableau: "/icons/tableau.svg",
   kafka : "/icons/kafka.svg",
+  nestjs: "/icons/nestjs.svg"
 }
 
 export function TechIcon({ name, className }: { name: string; className?: string }) {

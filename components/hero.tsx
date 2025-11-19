@@ -16,25 +16,24 @@ import { motion } from "framer-motion";
 export default function Hero() {
   const tools = [
     { name: "React.js", icon: "react" },
+    { name: "Redux", icon: "redux" },
     { name: "Next.js", icon: "nextjs" },
     { name: "TailwindCSS", icon: "tailwind" },
-    { name: "Bootstrap", icon: "bootstrap" },
     // { name: "C++", icon: "cpp" },
-    { name: "CSS", icon: "css" },
-    { name: "Python", icon: "python" },
-    { name: "Solidity", icon: "solidity" },
     { name: "HTML", icon: "html5" },
-    { name: "Flask", icon: "flask" },
+    { name: "TypeScript", icon: "typescript" },
+    { name: "Node.js", icon: "nodejs" },
+    {name: "NestJS", icon: "nestjs"},
+    { name: "Python", icon: "python" },
     { name: "FastAPI", icon: "fastapi" },
     { name: "Django", icon: "django" },
+    { name: "Solidity", icon: "solidity" },
     { name: "Arch Linux", icon: "archlinux" },
     { name: "MongoDB", icon: "mongodb" },
     { name: "SQL", icon: "sql" },
     { name: "PostgreSQL", icon: "postgresql" },
     { name: "Prisma", icon: "prisma" },
-    { name: "Node.js", icon: "nodejs" },
     { name: "Firebase", icon: "firebase" },
-    { name: "TypeScript", icon: "typescript" },
     { name: "Docker", icon: "docker" },
     { name: "Git", icon: "git" },
     { name: "AWS", icon: "aws" },
@@ -43,7 +42,6 @@ export default function Hero() {
     { name: "Langchain", icon: "langchain" },
     { name: "Redis", icon: "redis" },
     { name: "Kafka", icon: "kafka" },
-    { name: "Redux", icon: "redux" },
   ];
   return (
     <>
@@ -58,10 +56,10 @@ export default function Hero() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 py-8 md:py-24">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 relative">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 relative">
                 Hi, I'm{" "}
                 <span className="text-primary text-glow pulse-glow relative inline-block">
                   <TypeAnimation
@@ -73,17 +71,18 @@ export default function Hero() {
                   <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 I'm a passionate full-stack developer and machine learning
                 enthusiast with a strong background in building scalable web
-                applications and implementing AI solutions. <br />
+                applications and implementing AI solutions.{" "}
+                <br className="hidden sm:block" />
                 I'm open to work, freelance and contribute.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 md:gap-4 mb-20 md:mb-0">
                 <Button
                   size="lg"
                   asChild
-                  className="glow-effect hover:shadow-[0_0_25px_hsl(var(--primary))] transition-all duration-300"
+                  className="glow-effect hover:shadow-[0_0_25px_hsl(var(--primary))] transition-all duration-300 text-sm md:text-base"
                 >
                   <a href="#projects">View My Work</a>
                 </Button>
@@ -93,7 +92,7 @@ export default function Hero() {
                     <Button
                       size="lg"
                       variant="secondary"
-                      className="group neon-border hover:glow-effect transition-all duration-300"
+                      className="group neon-border hover:glow-effect transition-all duration-300 text-sm md:text-base"
                     >
                       Resume
                       <ChevronDown className="ml-2 h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
@@ -129,13 +128,13 @@ export default function Hero() {
                   size="lg"
                   variant="outline"
                   asChild
-                  className="neon-border hover:glow-effect transition-all duration-300"
+                  className="neon-border hover:glow-effect transition-all duration-300 text-sm md:text-base"
                 >
                   <a href="#contact">Contact Me</a>
                 </Button>
               </div>
 
-              <div className="flex gap-4 mt-8">
+              <div className="hidden md:flex gap-4 mt-8">
                 {/* GitHub */}
                 <motion.a
                   href="https://github.com/chayan-mann"
@@ -147,7 +146,7 @@ export default function Hero() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="#ffffff" // GitHub white
+                    fill="#ffffff"
                     viewBox="0 0 24 24"
                     className="h-6 w-6"
                   >
@@ -228,8 +227,8 @@ export default function Hero() {
                 </motion.a>
               </div>
             </div>
-            <div className="order-1 md:order-2 flex justify-center">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden">
+            <div className="order-1 md:order-2 flex justify-center mb-6 md:mb-0">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full overflow-hidden">
                 {/* Outer glow ring */}
                 <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 blur-xl animate-pulse"></div>
                 {/* Main border with neon effect */}
