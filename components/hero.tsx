@@ -240,6 +240,7 @@ export default function Hero() {
                     className="object-cover rounded-full"
                     priority
                   />
+                  
                   {/* Inner highlight ring */}
                   <div className="absolute inset-2 rounded-full border border-primary/30 pointer-events-none"></div>
                 </div>
