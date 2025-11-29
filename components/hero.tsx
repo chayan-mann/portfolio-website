@@ -78,7 +78,7 @@ export default function Hero() {
                 <br className="hidden sm:block" />
                 I'm open to work, freelance and contribute.
               </p>
-              <div className="flex flex-wrap gap-3 md:gap-4 mb-20 md:mb-0">
+              <div className="flex flex-wrap gap-3 md:gap-4 mb-10 md:mb-0">
                 <Button
                   size="lg"
                   asChild
@@ -250,7 +250,7 @@ export default function Hero() {
         </div>
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a href="#tools" aria-label="Scroll down">
-            <ArrowDown className="h-6 w-6 text-muted-foreground" />
+            {/* <ArrowDown className="h-6 w-6 text-muted-foreground" /> */}
           </a>
         </div>
       </section>
