@@ -23,7 +23,7 @@ export default function Hero() {
     { name: "HTML", icon: "html5" },
     { name: "TypeScript", icon: "typescript" },
     { name: "Node.js", icon: "nodejs" },
-    {name: "NestJS", icon: "nestjs"},
+    { name: "NestJS", icon: "nestjs" },
     { name: "Python", icon: "python" },
     { name: "FastAPI", icon: "fastapi" },
     { name: "Django", icon: "django" },
@@ -47,7 +47,7 @@ export default function Hero() {
     <>
       <section
         id="home"
-        className="relative pt-20 min-h-screen flex items-center overflow-hidden"
+        className="relative pt-8 md:pt-20 min-h-screen flex items-center overflow-hidden"
       >
         {/* Futuristic background effects */}
         <div className="absolute inset-0 -z-10">
@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        <div className="container mx-auto px-4 py-8 md:py-24">
+        <div className="container mx-auto px-4 py-4 md:py-24">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 relative">
@@ -134,7 +134,7 @@ export default function Hero() {
                 </Button>
               </div>
 
-              <div className="hidden md:flex gap-4 mt-8">
+              <div className="flex gap-3 md:gap-4 mt-8">
                 {/* GitHub */}
                 <motion.a
                   href="https://github.com/chayan-mann"
@@ -148,11 +148,11 @@ export default function Hero() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="#ffffff"
                     viewBox="0 0 24 24"
-                    className="h-6 w-6"
+                    className="h-5 w-5 md:h-6 md:w-6"
                   >
                     <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.4.7-4.1-1.7-4.1-1.7a3.3 3.3 0 0 0-1.3-1.8c-1-.7.1-.7.1-.7a2.6 2.6 0 0 1 1.9 1.3 2.7 2.7 0 0 0 3.6 1 2.7 2.7 0 0 1 .8-1.7c-2.7-.3-5.6-1.4-5.6-6.1a4.7 4.7 0 0 1 1.2-3.3 4.4 4.4 0 0 1 .1-3.2s1-.3 3.4 1.2a11.4 11.4 0 0 1 6.2 0c2.3-1.5 3.4-1.2 3.4-1.2a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.3c0 4.7-2.9 5.8-5.6 6.1a3 3 0 0 1 .9 2.4v3.6c0 .3.2.7.8.6A12 12 0 0 0 12 .3" />
                   </svg>
-                  <span className="hidden group-hover:inline text-sm font-medium text-foreground">
+                  <span className="hidden md:group-hover:inline text-sm font-medium text-foreground">
                     GitHub
                   </span>
                 </motion.a>
@@ -170,11 +170,11 @@ export default function Hero() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="#0A66C2"
                     viewBox="0 0 24 24"
-                    className="h-6 w-6"
+                    className="h-5 w-5 md:h-6 md:w-6"
                   >
                     <path d="M20.45 20.45h-3.6v-5.6c0-1.3 0-3-1.8-3s-2 1.4-2 2.9v5.7h-3.6V9h3.4v1.6h.1a3.7 3.7 0 0 1 3.4-1.9c3.7 0 4.4 2.4 4.4 5.4v6.4ZM5.34 7.43a2.08 2.08 0 1 1 0-4.16 2.08 2.08 0 0 1 0 4.16Zm1.8 13.02h-3.6V9h3.6v11.45Z" />
                   </svg>
-                  <span className="hidden group-hover:inline text-sm font-medium text-foreground">
+                  <span className="hidden md:group-hover:inline text-sm font-medium text-foreground">
                     LinkedIn
                   </span>
                 </motion.a>
@@ -191,14 +191,14 @@ export default function Hero() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    className="h-6 w-6"
+                    className="h-5 w-5 md:h-6 md:w-6"
                   >
                     <path
                       fill="#FFA116"
                       d="M13.48 0a1.37 1.37 0 0 0-.96.44L7.12 6.23 3.27 10.36A5.26 5.26 0 0 0 2.06 12.47a5.53 5.53 0 0 0 .12 2.88 5.94 5.94 0 0 0 1.62 2.22l4.28 4.19c2.25 2.16 5.85 2.13 8.06-.07l2.4-2.39a1.38 1.38 0 1 0-1.95-1.95l-2.4 2.39a3 3 0 0 1-4.23.02L7.1 16.6c-.65-.64-.97-1.47-.95-2.26a2.68 2.68 0 0 1 .69-1.69l2.28-2.58c1.06-1.13 3.2-1.27 4.43-.28l3.5 2.83a1.38 1.38 0 0 0 1.73-2.15l-3.5-2.83a5.5 5.5 0 0 0-2.77-1.2l2.02-2.16A1.38 1.38 0 0 0 13.48 0Z"
                     />
                   </svg>
-                  <span className="hidden group-hover:inline text-sm font-medium text-foreground">
+                  <span className="hidden md:group-hover:inline text-sm font-medium text-foreground">
                     LeetCode
                   </span>
                 </motion.a>
@@ -215,13 +215,13 @@ export default function Hero() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    className="h-6 w-6"
+                    className="h-5 w-5 md:h-6 md:w-6"
                   >
                     <rect x="3" y="4" width="4" height="16" fill="#FFD700" />
                     <rect x="10" y="7" width="4" height="13" fill="#1E90FF" />
                     <rect x="17" y="2" width="4" height="18" fill="#FF4500" />
                   </svg>
-                  <span className="hidden group-hover:inline text-sm font-medium text-foreground">
+                  <span className="hidden md:group-hover:inline text-sm font-medium text-foreground">
                     Codeforces
                   </span>
                 </motion.a>
@@ -240,7 +240,7 @@ export default function Hero() {
                     className="object-cover rounded-full"
                     priority
                   />
-                  
+
                   {/* Inner highlight ring */}
                   <div className="absolute inset-2 rounded-full border border-primary/30 pointer-events-none"></div>
                 </div>
