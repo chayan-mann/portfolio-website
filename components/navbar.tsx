@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Home, Briefcase, Code, Mail, Github } from "lucide-react";
+import { Home, Briefcase, Code, Mail, Github, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { ThemeToggle } from "../components/theme-toggle";
@@ -24,11 +24,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Home", href: "#home", icon: Home },
-    { name: "Skills", href: "#skills", icon: Code },
-    { name: "Projects", href: "#projects", icon: Briefcase },
-    { name: "Contact", href: "#contact", icon: Mail },
+  const desktopNavLinks = [
+    { name: "Home", href: "/#home" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Blogs", href: "/blogs" },
+  ];
+
+  const mobileNavLinks = [
+    { name: "Home", href: "/#home", icon: Home },
+    { name: "Projects", href: "/#projects", icon: Briefcase },
+    { name: "Blogs", href: "/blogs", icon: BookOpen },
     {
       name: "GitHub",
       href: "https://github.com/chayan-mann",
@@ -41,32 +47,34 @@ export default function Navbar() {
     <>
       {/* Desktop Header */}
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-300 hidden md:block ${
+        className={`fixed top-0 w-full z-50 transition-all duration-500 hidden md:block ${
           scrolled
-            ? "bg-background/90 backdrop-blur-md border-b border-muted"
-            : "bg-transparent"
+            ? "bg-background/95 backdrop-blur-lg border-b border-primary/20 shadow-lg shadow-primary/5"
+            : "bg-background/5 backdrop-blur-sm"
         }`}
       >
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold">
+        <div className="container mx-auto px-6 py-5 flex items-center justify-between">
+          <Link
+            href="/"
+            className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent hover:from-primary/80 hover:to-primary/40 transition-all duration-300"
+          >
             Chayan Mann
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="flex items-center space-x-8">
-            {navLinks.map((link) => (
+          <nav className="flex items-center gap-1">
+            {desktopNavLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium hover:text-primary transition-colors"
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
+                className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group"
               >
-                {link.name}
+                <span className="relative z-10">{link.name}</span>
+                <span className="absolute inset-0 rounded-lg bg-primary/0 group-hover:bg-primary/10 transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-3/4 transition-all duration-300"></span>
               </Link>
             ))}
             {/* <ThemeToggle /> */}
-            {/* <Button>Resume</Button> */}
           </nav>
         </div>
       </header>
@@ -75,7 +83,7 @@ export default function Navbar() {
       <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
         <div className="bg-zinc-900/95 backdrop-blur-md border border-zinc-800 rounded-full px-4 py-3 shadow-2xl shadow-primary/5">
           <div className="flex items-center gap-2">
-            {navLinks.map((link) => {
+            {mobileNavLinks.map((link) => {
               const Icon = link.icon;
               return (
                 <Link

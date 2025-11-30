@@ -72,11 +72,9 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                I'm a passionate full-stack developer and machine learning
-                enthusiast with a strong background in building scalable web
-                applications and implementing AI solutions.{" "}
+                I’m a software engineer specializing in backend architecture, distributed systems, and AI-driven features. I build scalable applications, design reliable event-driven pipelines, integrate LLMs into real products, and work across modern web technologies.{" "}
                 <br className="hidden sm:block" />
-                I'm open to work, freelance and contribute.
+                 Open to full-time roles, freelance projects, and impactful collaborations.
               </p>
               <div className="flex flex-wrap gap-3 md:gap-4 mb-10 md:mb-0">
                 <Button
