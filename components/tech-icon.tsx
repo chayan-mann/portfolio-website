@@ -15,17 +15,17 @@ const iconMap: Record<string, string> = {
   node: "/icons/nodejs.svg",
   express: "/icons/express.svg",
   mongodb: "/icons/mongodb.svg",
-  postgresql: "/icons/postgresql.svg",
+  postgresql: "/icons/PostgresSQL.svg",
   mysql: "/icons/mysql.svg",
   firebase: "/icons/firebase.svg",
   git: "/icons/git.svg",
   github: "/icons/github.svg",
   docker: "/icons/docker.svg",
   aws: "/icons/aws.svg",
-  python: "/icons/python.svg",
+  python: "/icons/Python.svg",
   django: "/icons/django.svg",
   flask: "/icons/flask.svg",
-  cpp: "/icons/cpp.svg",
+  cplus: "/icons/C++.svg",
   c: "/icons/c.svg",
   java: "/icons/java.svg",
   php: "/icons/php.svg",
@@ -36,7 +36,6 @@ const iconMap: Record<string, string> = {
   bootstrap: "/icons/bootstrap.svg",
   sass: "/icons/sass.svg",
   redux: "/icons/redux.svg",
-  graphql: "/icons/graphql.svg",
   webpack: "/icons/webpack.svg",
   babel: "/icons/babel.svg",
   jest: "/icons/jest.svg",
@@ -48,7 +47,7 @@ const iconMap: Record<string, string> = {
   swift: "/icons/swift.svg",
   flutter: "/icons/flutter.svg",
   dart: "/icons/dart.svg",
-  redis: "/icons/redis.svg",
+  redis: "/icons/Redis.svg",
   elasticsearch: "/icons/elasticsearch.svg",
   kubernetes: "/icons/kubernetes.svg",
   terraform: "/icons/terraform.svg",
@@ -81,7 +80,8 @@ const iconMap: Record<string, string> = {
   sql: "/icons/mysql.svg",
   tableau: "/icons/tableau.svg",
   kafka : "/icons/kafka.svg",
-  nestjs: "/icons/nestjs.svg"
+  nestjs: "/icons/nestjs.svg",
+  graphql: "/icons/GraphQL.svg"
 }
 
 export function TechIcon({ name, className }: { name: string; className?: string }) {
