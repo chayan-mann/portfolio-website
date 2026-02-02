@@ -26,9 +26,10 @@ import {
   Layers,
   Container,
   Unplug,
+  Workflow,
 } from "lucide-react";
 
-const techIconMap: { [key: string]: JSX.Element } = {
+const techIconMap: { [key: string]: React.ReactNode } = {
   Python: <Code2 className="h-4 w-4 text-yellow-500" />,
   FastAPI: <Server className="h-4 w-4 text-green-500" />,
   MongoDB: <Database className="h-4 w-4 text-green-600" />,
@@ -59,6 +60,8 @@ const techIconMap: { [key: string]: JSX.Element } = {
   Solidity: <Code className="h-4 w-4 text-sky-400" />,
   Redux: <Layers className="h-4 w-4 text-purple-800" />,
   "Socket.io": <Unplug className="h-4 w-4 text-green-500" />,
+  "NestJS": <Server className="h-4 w-4 text-green-500" />,
+  "Github Actions": <Workflow className="h-4 w-4 text-green-600" />,
 };
 
 export default function Projects() {
@@ -133,6 +136,25 @@ export default function Projects() {
   ];
 
   const fullStackProjects = [
+    {
+      title: "Worklium (coming soon)",
+      description:
+        "Worklium is a real-time collaborative Kanban platform that helps teams organize, track, and sync their work seamlessly.",
+      image: "/images/worklium.jpg",
+      technologies: [
+        "React.js",
+        "NestJS",
+        "PostgreSQL",
+        "AWS",
+        "Redis",
+        "Socket.io",
+        "Docker",
+        "Github Actions"
+      ],
+      liveLink: "",
+      demoVideo: "",
+      githubLink: "",
+    },
     {
       title: "fanTune",
       description:
