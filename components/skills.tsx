@@ -893,7 +893,7 @@ export default function Skills() {
           </circle>
         </svg>
       ),
-      technologies: ["Git", "Docker", "CI/CD", "AWS"],
+      technologies: ["Git", "Linux", "Networking", "Docker", "CI/CD pipeline", "Bash/Shell scripting", "AWS"],
     },
     {
       title: "Data Analysis",
