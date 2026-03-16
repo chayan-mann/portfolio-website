@@ -25,6 +25,14 @@ export default function Blogs() {
       readTime: "7 min read",
       tags: ["Kafka", "Distributed Systems", "System Design", "Event Driven Architecture", "Backend"],
     },
+    {
+      title: "Designing a Safe Payment Gateway for E-Commerce Platforms",
+      description: "Prevent duplicate payments, inconsistent orders and race conditions in payment processing.",
+      url: "https://medium.com/@chayanmann09/designing-a-safe-payment-flow-for-e-commerce-platforms-aab2a6f6e54c",
+      date: "16th March 2026",
+      readTime: "5 min read",
+      tags: ["Payment Gateway", "Software Architecture", "System Design", "Backend", "Design Patterns"],
+    }
     // Add more blogs here as you publish them
   ];
 
