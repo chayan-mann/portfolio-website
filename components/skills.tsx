@@ -318,6 +318,9 @@ export default function Skills() {
         "TailwindCSS",
         "React",
         "Next.js",
+        "Redux",
+        "Tanstack Query",
+        "Framer Motion"
       ],
     },
     {
