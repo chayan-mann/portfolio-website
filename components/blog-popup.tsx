@@ -1,12 +1,22 @@
  "use client";
 
- import { useState } from "react";
+ import { useEffect, useState } from "react";
  import Link from "next/link";
  import { X } from "lucide-react";
  import { Button } from "@/components/ui/button";
 
  export default function BlogPopup() {
-   const [open, setOpen] = useState(true);
+   const [open, setOpen] = useState(false);
+
+   useEffect(() => {
+     if (typeof window === "undefined") return;
+
+     const hasSeen = sessionStorage.getItem("blogPopupSeen");
+     if (!hasSeen) {
+       setOpen(true);
+       sessionStorage.setItem("blogPopupSeen", "true");
+     }
+   }, []);
 
    if (!open) return null;
 
@@ -31,7 +41,12 @@
          </div>
 
          <div className="mt-3 flex gap-2">
-           <Button asChild size="sm" className="h-8 px-3 text-xs">
+           <Button
+             asChild
+             size="sm"
+             className="h-8 px-3 text-xs"
+             onClick={() => setOpen(false)}
+           >
              <Link href="/blogs">Take me to the blog</Link>
            </Button>
            <Button
