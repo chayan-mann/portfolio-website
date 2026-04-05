@@ -32,6 +32,14 @@ export default function Blogs() {
       date: "16th March 2026",
       readTime: "5 min read",
       tags: ["Payment Gateway", "Software Architecture", "System Design", "Backend", "Design Patterns"],
+    },
+    {
+      title: "The Engineering Behind a Reliable, Scalable Data Pipeline",
+      description: "How we improved throughput, reliability, and resilience without rewriting the system.",
+      url: "https://medium.com/@chayanmann09/the-engineering-behind-a-reliable-scalable-data-pipeline-ad3f9cdaabf1",
+      date: "5th April 2026",
+      readTime: "5 min read",
+      tags: ["Data Pipeline", "System Design", "Reliability", "Backend Engineering", "PostgreSQL"],
     }
     // Add more blogs here as you publish them
   ];
