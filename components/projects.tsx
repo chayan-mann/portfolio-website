@@ -139,7 +139,7 @@ export default function Projects() {
     {
       title: "Barkz & Mewz",
       description:
-        "Barkz & Mewz is an e-commerce platform for dogs and cats.",
+        "Barkz & Mewz is an e-commerce platform for dogs and cats food and accessories.",
       image: "/images/barkzmewz.png",
       technologies: [
         "Frontend",
