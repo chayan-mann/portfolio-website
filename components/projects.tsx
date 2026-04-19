@@ -15,6 +15,7 @@ import {
   Eye,
   Cloud,
   Terminal,
+  CreditCard,
   FileJson,
   Brain,
   GitFork,
@@ -27,6 +28,7 @@ import {
   Container,
   Unplug,
   Workflow,
+  Facebook,
 } from "lucide-react";
 
 const techIconMap: { [key: string]: React.ReactNode } = {
@@ -35,6 +37,7 @@ const techIconMap: { [key: string]: React.ReactNode } = {
   MongoDB: <Database className="h-4 w-4 text-green-600" />,
   MongoEngine: <Database className="h-4 w-4 text-green-600" />,
   AWS: <Cloud className="h-4 w-4 text-orange-400" />,
+  "Meta Graph API": <Facebook className="h-4 w-4 text-blue-400" />,
   "CI/CD": <GitFork className="h-4 w-4 text-purple-400" />,
   Docker: <Container className="h-4 w-4 text-blue-500" />,
   MySQL: <Database className="h-4 w-4 text-blue-600" />,
@@ -51,8 +54,12 @@ const techIconMap: { [key: string]: React.ReactNode } = {
   TailwindCSS: <Code className="h-4 w-4 text-sky-400" />,
   NextJS: <Globe className="h-4 w-4 text-white" />,
   "React.js": <Globe className="h-4 w-4 text-blue-400" />,
+  "Backend": <Server className="h-4 w-4 text-green-500" />,
+  "Razorpay Gateway": <CreditCard className="h-4 w-4 text-red-500" />,
+  "Frontend": <Globe className="h-4 w-4 text-blue-400" />,
   "Node.js": <Server className="h-4 w-4 text-green-500" />,
   Flask: <FlaskConical className="h-4 w-4 text-white" />,
+  "CI/CD Pipeline": <GitFork className="h-4 w-4 text-purple-400" />,
   Rust: <Terminal className="h-4 w-4 text-orange-600" />,
   GenAI: <Brain className="h-4 w-4 text-fuchsia-500" />,
   Blockchain: <GlobeLock className="h-4 w-4 text-sky-600" />,
@@ -60,7 +67,7 @@ const techIconMap: { [key: string]: React.ReactNode } = {
   Solidity: <Code className="h-4 w-4 text-sky-400" />,
   Redux: <Layers className="h-4 w-4 text-purple-800" />,
   "Socket.io": <Unplug className="h-4 w-4 text-green-500" />,
-  "NestJS": <Server className="h-4 w-4 text-green-500" />,
+  NestJS: <Server className="h-4 w-4 text-green-500" />,
   "Github Actions": <Workflow className="h-4 w-4 text-green-600" />,
 };
 
@@ -141,12 +148,7 @@ export default function Projects() {
       description:
         "Barkz & Mewz is an e-commerce platform for dogs and cats food and accessories.",
       image: "/images/barkzmewz.png",
-      technologies: [
-        "Frontend",
-        "Backend",
-        "AWS",
-        "Docker"
-      ],
+      technologies: ["Frontend", "Backend", "PostgreSQL", "AWS", "Docker", "CI/CD Pipeline", "Razorpay Gateway" , "Meta Graph API"],
       liveLink: "https://barkzandmewz.com",
       demoVideo: "",
       githubLink: "",
@@ -164,7 +166,7 @@ export default function Projects() {
         "Redis",
         "Socket.io",
         "Docker",
-        "Github Actions"
+        "Github Actions",
       ],
       liveLink: "",
       demoVideo: "",
@@ -289,7 +291,7 @@ export default function Projects() {
                   hover:border-zinc-700 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2"
     >
       {/* Image Section */}
-      <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 border-b border-zinc-800">
+      <div className="relative h-52 w-full max-w-md mx-auto overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 border-b border-zinc-800">
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
