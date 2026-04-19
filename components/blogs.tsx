@@ -40,8 +40,15 @@ export default function Blogs() {
       date: "5th April 2026",
       readTime: "5 min read",
       tags: ["Data Pipeline", "System Design", "Reliability", "Backend Engineering", "PostgreSQL"],
-    }
-    // Add more blogs here as you publish them
+    },
+    {
+      title: "Migrating your PostgreSQL database to AWS RDS step by step with security best practices",
+      description: "Learn how to migrate your PostgreSQL database to AWS RDS step by step with security best practices.",
+      url: "https://medium.com/@chayanmann09/migrating-your-postgresql-database-to-aws-rds-step-by-step-with-security-best-practices-3b419c0d5318",
+      date: "14th April 2026",
+      readTime: "3 min read",
+      tags: ["PostgreSQL", "AWS RDS", "Security", "Backend"],
+    },
   ];
 
   return (
