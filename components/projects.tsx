@@ -137,6 +137,21 @@ export default function Projects() {
 
   const fullStackProjects = [
     {
+      title: "Barkz & Mewz",
+      description:
+        "Barkz & Mewz is an e-commerce platform for dogs and cats.",
+      image: "/images/barkzmewz.png",
+      technologies: [
+        "Frontend",
+        "Backend",
+        "AWS",
+        "Docker"
+      ],
+      liveLink: "https://barkzandmewz.com",
+      demoVideo: "",
+      githubLink: "",
+    },
+    {
       title: "Worklium (coming soon)",
       description:
         "Worklium is a real-time collaborative Kanban platform that helps teams organize, track, and sync their work seamlessly.",
