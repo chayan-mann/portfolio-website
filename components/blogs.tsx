@@ -49,6 +49,14 @@ export default function Blogs() {
       readTime: "3 min read",
       tags: ["PostgreSQL", "AWS RDS", "Security", "Backend"],
     },
+    {
+      title: "How Authentication Actually Works Across Microservices (Beyond JWT Basics)",
+      description: "A practical guide to implementing secure authentication across microservices, covering token management, session handling, and best practices for distributed systems.",
+      url: "https://medium.com/@chayanmann09/how-authentication-actually-works-across-microservices-beyond-jwt-basics-9479b1dc4766",
+      date: "6th May 2026",
+      readTime: "3 min read",
+      tags: ["Microservices", "Authentication", "JWT", "Distributed Systems", "Backend"],
+    }
   ];
 
   return (
