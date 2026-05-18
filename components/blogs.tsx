@@ -56,6 +56,14 @@ export default function Blogs() {
       date: "6th May 2026",
       readTime: "3 min read",
       tags: ["Microservices", "Authentication", "JWT", "Distributed Systems", "Backend"],
+    },
+    {
+      title: "PostgreSQL Doesn’t Immediately Write Your Data to Disk — Here’s Why",
+      description: "Understand why PostgreSQL uses a write-ahead log (WAL) and how it ensures data durability and performance without immediately writing to disk.",
+      url: "https://medium.com/@chayanmann09/postgresql-doesnt-immediately-write-your-data-to-disk-here-s-why-d4597a57236e",
+      date: "18th May 2026",
+      readTime: "6 min read",
+      tags: ["PostgreSQL", "Database Internals", "Write Ahead Logging", "System Design"],
     }
   ];
 
