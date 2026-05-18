@@ -1,7 +1,13 @@
 "use client";
 
 import { ExternalLink, Calendar, Clock } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
@@ -19,52 +25,90 @@ export default function Blogs() {
   const blogs: Blog[] = [
     {
       title: "Building a Reliable Retry Mechanism in Kafka",
-      description: "Learn how to implement a robust retry mechanism in Apache Kafka to handle message processing failures and ensure reliable data delivery in distributed systems.",
+      description:
+        "Learn how to implement a robust retry mechanism in Apache Kafka to handle message processing failures and ensure reliable data delivery in distributed systems.",
       url: "https://medium.com/@chayanmann09/building-a-reliable-retry-mechanism-in-kafka-2ffd2c1c5a3a",
       date: "30th November 2025",
       readTime: "7 min read",
-      tags: ["Kafka", "Distributed Systems", "System Design", "Event Driven Architecture", "Backend"],
+      tags: [
+        "Kafka",
+        "Distributed Systems",
+        "System Design",
+        "Event Driven Architecture",
+        "Backend",
+      ],
     },
     {
       title: "Designing a Safe Payment Gateway for E-Commerce Platforms",
-      description: "Prevent duplicate payments, inconsistent orders and race conditions in payment processing.",
+      description:
+        "Prevent duplicate payments, inconsistent orders and race conditions in payment processing.",
       url: "https://medium.com/@chayanmann09/designing-a-safe-payment-flow-for-e-commerce-platforms-aab2a6f6e54c",
       date: "16th March 2026",
       readTime: "5 min read",
-      tags: ["Payment Gateway", "Software Architecture", "System Design", "Backend", "Design Patterns"],
+      tags: [
+        "Payment Gateway",
+        "Software Architecture",
+        "System Design",
+        "Backend",
+        "Design Patterns",
+      ],
     },
     {
       title: "The Engineering Behind a Reliable, Scalable Data Pipeline",
-      description: "How we improved throughput, reliability, and resilience without rewriting the system.",
+      description:
+        "How we improved throughput, reliability, and resilience without rewriting the system.",
       url: "https://medium.com/@chayanmann09/the-engineering-behind-a-reliable-scalable-data-pipeline-ad3f9cdaabf1",
       date: "5th April 2026",
       readTime: "5 min read",
-      tags: ["Data Pipeline", "System Design", "Reliability", "Backend Engineering", "PostgreSQL"],
+      tags: [
+        "Data Pipeline",
+        "System Design",
+        "Reliability",
+        "Backend Engineering",
+        "PostgreSQL",
+      ],
     },
     {
-      title: "Migrating your PostgreSQL database to AWS RDS step by step with security best practices",
-      description: "Learn how to migrate your PostgreSQL database to AWS RDS step by step with security best practices.",
+      title:
+        "Migrating your PostgreSQL database to AWS RDS step by step with security best practices",
+      description:
+        "Learn how to migrate your PostgreSQL database to AWS RDS step by step with security best practices.",
       url: "https://medium.com/@chayanmann09/migrating-your-postgresql-database-to-aws-rds-step-by-step-with-security-best-practices-3b419c0d5318",
       date: "14th April 2026",
       readTime: "3 min read",
       tags: ["PostgreSQL", "AWS RDS", "Security", "Backend"],
     },
     {
-      title: "How Authentication Actually Works Across Microservices (Beyond JWT Basics)",
-      description: "A practical guide to implementing secure authentication across microservices, covering token management, session handling, and best practices for distributed systems.",
+      title:
+        "How Authentication Actually Works Across Microservices (Beyond JWT Basics)",
+      description:
+        "A practical guide to implementing secure authentication across microservices, covering token management, session handling, and best practices for distributed systems.",
       url: "https://medium.com/@chayanmann09/how-authentication-actually-works-across-microservices-beyond-jwt-basics-9479b1dc4766",
       date: "6th May 2026",
       readTime: "3 min read",
-      tags: ["Microservices", "Authentication", "JWT", "Distributed Systems", "Backend"],
+      tags: [
+        "Microservices",
+        "Authentication",
+        "JWT",
+        "Distributed Systems",
+        "Backend",
+      ],
     },
     {
-      title: "PostgreSQL Doesn’t Immediately Write Your Data to Disk — Here’s Why",
-      description: "Understand why PostgreSQL uses a write-ahead log (WAL) and how it ensures data durability and performance without immediately writing to disk.",
+      title:
+        "PostgreSQL Doesn’t Immediately Write Your Data to Disk — Here’s Why",
+      description:
+        "Understand why PostgreSQL uses a write-ahead log (WAL) and how it ensures data durability and performance without immediately writing to disk.",
       url: "https://medium.com/@chayanmann09/postgresql-doesnt-immediately-write-your-data-to-disk-here-s-why-d4597a57236e",
       date: "18th May 2026",
       readTime: "6 min read",
-      tags: ["PostgreSQL", "Database Internals", "Write Ahead Logging", "System Design"],
-    }
+      tags: [
+        "PostgreSQL",
+        "Database Internals",
+        "Write Ahead Logging",
+        "System Design",
+      ],
+    },
   ];
 
   return (
@@ -81,12 +125,13 @@ export default function Blogs() {
             <span className="absolute -bottom-2 left-0 right-0 h-1 bg-primary"></span>
           </h2>
           <p className="text-muted-foreground mb-12 max-w-2xl">
-            Sharing my thoughts and learnings on software development, distributed systems, and technology.
+            Sharing my thoughts and learnings on software development,
+            distributed systems, and technology.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogs.map((blog, index) => (
+          {[...blogs].reverse().map((blog, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
