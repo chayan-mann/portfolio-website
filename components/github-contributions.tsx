@@ -240,19 +240,6 @@ export default function GitHubContributions() {
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
               A merged contribution calendar across my 3 different accounts for the rolling last year.
             </p>
-
-            <div className="mt-6 rounded-lg border border-primary/30 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 px-7 py-4 shadow-[0_0_30px_rgba(34,211,238,0.08)]">
-              <div className="text-3xl font-bold text-white md:text-4xl">
-                {data
-                  ? data.totalContributions.toLocaleString()
-                  : loading
-                    ? "..."
-                    : "0"}
-              </div>
-              <div className="mt-1 text-sm text-gray-400">
-                total contributions
-              </div>
-            </div>
           </div>
 
           {loading ? (
@@ -261,8 +248,16 @@ export default function GitHubContributions() {
             <HeatmapError message={error} />
           ) : data ? (
             <div className="mx-auto w-fit max-w-full rounded-lg border border-zinc-800 bg-zinc-950/60 px-4 py-5 shadow-2xl shadow-primary/5 md:px-8 md:py-6">
-              <div className="mb-5 flex flex-col items-center gap-3 text-center text-sm text-gray-400">
-                <span>{formatDateRange(data.range.from, data.range.to)}</span>
+              <div className="mb-4 flex flex-col gap-1 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+                <div className="text-gray-300">
+                  <span className="font-medium text-white">
+                    {data.totalContributions.toLocaleString()} contributions
+                  </span>{" "}
+                  in the last year
+                </div>
+                <div className="text-xs text-gray-500 sm:text-right">
+                  {formatDateRange(data.range.from, data.range.to)}
+                </div>
               </div>
 
               <TooltipProvider delayDuration={80}>
