@@ -1,6 +1,11 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Skills() {
   const skills = [
@@ -779,8 +784,6 @@ export default function Skills() {
     },
   ];
 
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <section id="skills" className="py-20 md:py-28 bg-black">
       <div className="container mx-auto px-4">
@@ -796,7 +799,12 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <Accordion
+          type="single"
+          collapsible
+          defaultValue="skill-0"
+          className="mx-auto max-w-5xl space-y-4"
+        >
           {skills.map((skill, i) => (
             <motion.div
               key={skill.title}
@@ -804,58 +812,57 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true }}
-              onHoverStart={() => setHoveredIndex(i)}
-              onHoverEnd={() => setHoveredIndex(null)}
-              className="group relative"
             >
-              <div className="relative h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-all duration-300 overflow-hidden hover:shadow-2xl hover:shadow-primary/10">
-                {/* Illustration container */}
-                <div className="relative bg-gradient-to-br from-zinc-900 to-zinc-950 p-8 flex items-center justify-center h-48 border-b border-zinc-800">
-                  <motion.div
-                    animate={{
-                      y: hoveredIndex === i ? -8 : 0,
-                      scale: hoveredIndex === i ? 1.05 : 1,
-                    }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="w-full max-w-[180px]"
-                  >
-                    {skill.illustration}
-                  </motion.div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">
-                    {skill.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                    {skill.description}
-                  </p>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2">
-                    {skill.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-xs font-medium text-gray-300 bg-zinc-800/50 rounded-full border border-zinc-700/50 hover:border-primary/50 hover:text-primary hover:bg-zinc-800 transition-colors"
+              <AccordionItem
+                value={`skill-${i}`}
+                className="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm transition-all duration-300 hover:border-zinc-700 hover:shadow-2xl hover:shadow-primary/10 data-[state=open]:border-zinc-700"
+              >
+                <AccordionTrigger className="items-stretch gap-0 py-0 text-left hover:no-underline [&>svg]:mx-5 [&>svg]:my-auto [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-gray-400">
+                  <span className="flex min-w-0 flex-1 flex-col md:flex-row">
+                    <span className="relative flex h-44 shrink-0 items-center justify-center border-b border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 md:h-auto md:w-64 md:border-b-0 md:border-r">
+                      <motion.span
+                        whileHover={{ y: -8, scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="block w-full max-w-[170px]"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                        {skill.illustration}
+                      </motion.span>
+                    </span>
 
-                {/* Hover accent */}
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-purple-500"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: hoveredIndex === i ? 1 : 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
+                    <span className="flex min-w-0 flex-1 flex-col justify-center p-5 md:p-6">
+                      <span className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary/80">
+                        0{i + 1}
+                      </span>
+                      <span className="text-xl font-semibold text-white transition-colors group-hover:text-primary md:text-2xl">
+                        {skill.title}
+                      </span>
+                      <span className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
+                        {skill.description}
+                      </span>
+                    </span>
+                  </span>
+                </AccordionTrigger>
+
+                <AccordionContent className="px-5 pb-6 pt-0 md:ml-64 md:px-6">
+                  <div className="border-t border-zinc-800 pt-5">
+                    <div className="flex flex-wrap gap-2">
+                      {skill.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 text-xs font-medium text-gray-300 bg-zinc-800/50 rounded-full border border-zinc-700/50 hover:border-primary/50 hover:text-primary hover:bg-zinc-800 transition-colors"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </AccordionContent>
+
+                <div className="h-1 origin-left scale-x-0 bg-gradient-to-r from-primary to-purple-500 transition-transform duration-300 group-hover:scale-x-100 group-data-[state=open]:scale-x-100" />
+              </AccordionItem>
             </motion.div>
           ))}
-        </div>
+        </Accordion>
       </div>
     </section>
   );
