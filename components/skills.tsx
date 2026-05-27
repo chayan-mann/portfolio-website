@@ -831,7 +831,6 @@ export default function Skills() {
 
                     <span className="flex min-w-0 flex-1 flex-col justify-center p-5 md:p-6">
                       <span className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary/80">
-                        0{i + 1}
                       </span>
                       <span className="text-xl font-semibold text-white transition-colors group-hover:text-primary md:text-2xl">
                         {skill.title}

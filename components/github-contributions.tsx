@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AlertCircle, Github, Loader2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -156,6 +156,7 @@ export default function GitHubContributions() {
   const [data, setData] = useState<ContributionsResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const heatmapScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -211,6 +212,20 @@ export default function GitHubContributions() {
     return data?.days.reduce((max, day) => Math.max(max, day.count), 0) ?? 0;
   }, [data]);
 
+  useEffect(() => {
+    if (!data || !heatmapScrollRef.current) {
+      return;
+    }
+
+    const scrollContainer = heatmapScrollRef.current;
+    const frame = requestAnimationFrame(() => {
+      scrollContainer.scrollLeft =
+        scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [data]);
+
   return (
     <section id="github" className="bg-black py-20 md:py-28">
       <div className="container mx-auto px-4">
@@ -254,7 +269,7 @@ export default function GitHubContributions() {
               </div>
 
               <TooltipProvider delayDuration={80}>
-                <div className="overflow-x-auto pb-2">
+                <div ref={heatmapScrollRef} className="overflow-x-auto pb-2">
                   <div className="mx-auto min-w-max w-max">
                     <div
                       className="mb-2 ml-9 grid gap-[3px] text-xs text-gray-500"
