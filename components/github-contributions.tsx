@@ -51,20 +51,13 @@ type ContributionsError = {
 
 const WEEKDAY_LABELS = ["", "Mon", "", "Wed", "", "Fri", ""];
 
-const ACCOUNT_LABELS: Record<string, string> = {
-  "chayan-mann": "chayan-mann",
-  "chayan-mann09": "chayan-mann09",
-  chayanmann: "chayanmann",
-};
-
 const HEATMAP_LEVEL_CLASSES = [
-  "bg-zinc-950 border-zinc-800/80",
-  "bg-teal-950 border-teal-900/80",
-  "bg-teal-800 border-teal-700/80",
-  "bg-emerald-500/80 border-emerald-400/70",
-  "bg-cyan-300 border-cyan-200/80 shadow-[0_0_10px_rgba(103,232,249,0.45)]",
+  "bg-[#161b22] border border-[#30363d]",
+  "bg-[#0e4429] border border-[#0e4429]",
+  "bg-[#006d32] border border-[#006d32]",
+  "bg-[#26a641] border border-[#26a641]",
+  "bg-[#39d353] border border-[#39d353] shadow-[0_0_10px_rgba(57,211,83,0.35)]",
 ];
-
 function formatDate(date: string) {
   return new Intl.DateTimeFormat("en", {
     month: "short",
@@ -238,7 +231,7 @@ export default function GitHubContributions() {
               </span>
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
-              A merged contribution calendar across my 3 different accounts for the rolling last year.
+              A merged contribution calendar merged across my three accounts over the past year.
             </p>
           </div>
 
