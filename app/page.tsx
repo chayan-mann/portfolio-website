@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Skills from "@/components/skills";
+import GitHubContributions from "@/components/github-contributions";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
@@ -14,7 +15,7 @@ export default function Home() {
       <BlogPopup />
       <main>
         <Hero />
-        {/* <About /> */}
+        <GitHubContributions />
         <Skills />
         <Projects />
         <Contact />
