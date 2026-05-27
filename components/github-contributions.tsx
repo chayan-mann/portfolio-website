@@ -231,7 +231,7 @@ export default function GitHubContributions() {
               </span>
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
-              A merged contribution calendar merged across my three accounts over the past year.
+              A combined view of my GitHub activity across three accounts over the past year.
             </p>
           </div>
 
