@@ -231,13 +231,10 @@ export default function GitHubContributions() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-10 flex max-w-4xl flex-col items-center text-center">
-            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-              <Github className="h-3.5 w-3.5" />
-              GitHub Activity
-            </div>
-            <h2 className="text-3xl font-bold md:text-4xl">
-              <span className="bg-gradient-to-r from-primary via-cyan-300 to-emerald-400 bg-clip-text text-transparent">
-                Combined Contributions
+            <h2 className="flex items-center justify-center gap-2 text-2xl font-bold sm:gap-3 sm:text-3xl md:text-4xl">
+              <Github className="h-8 w-8 shrink-0 sm:h-10 sm:w-10" />
+              <span className="whitespace-nowrap bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                GitHub Contributions
               </span>
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
