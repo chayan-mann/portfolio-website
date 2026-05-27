@@ -785,9 +785,9 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 md:py-28 bg-black">
+    <section id="skills" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
               My Skills
@@ -803,7 +803,7 @@ export default function Skills() {
           type="single"
           collapsible
           defaultValue="skill-0"
-          className="mx-auto max-w-5xl space-y-4"
+          className="mx-auto max-w-4xl space-y-3"
         >
           {skills.map((skill, i) => (
             <motion.div
@@ -815,40 +815,38 @@ export default function Skills() {
             >
               <AccordionItem
                 value={`skill-${i}`}
-                className="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm transition-all duration-300 hover:border-zinc-700 hover:shadow-2xl hover:shadow-primary/10 data-[state=open]:border-zinc-700"
+                className="group overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm transition-all duration-300 hover:border-zinc-700 hover:shadow-xl hover:shadow-primary/10 data-[state=open]:border-zinc-700"
               >
-                <AccordionTrigger className="items-stretch gap-0 py-0 text-left hover:no-underline [&>svg]:mx-5 [&>svg]:my-auto [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-gray-400">
-                  <span className="flex min-w-0 flex-1 flex-col md:flex-row">
-                    <span className="relative flex h-44 shrink-0 items-center justify-center border-b border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 md:h-auto md:w-64 md:border-b-0 md:border-r">
+                <AccordionTrigger className="items-stretch gap-0 py-0 text-left hover:no-underline [&>svg]:mx-4 [&>svg]:my-auto [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-400">
+                  <span className="flex min-w-0 flex-1 flex-row">
+                    <span className="relative flex min-h-28 w-24 shrink-0 items-center justify-center border-r border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-950 p-3 sm:w-36 md:w-44 md:p-4">
                       <motion.span
-                        whileHover={{ y: -8, scale: 1.05 }}
+                        whileHover={{ y: -5, scale: 1.04 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="block w-full max-w-[170px]"
+                        className="block w-full max-w-[72px] sm:max-w-[104px] md:max-w-[128px]"
                       >
                         {skill.illustration}
                       </motion.span>
                     </span>
 
-                    <span className="flex min-w-0 flex-1 flex-col justify-center p-5 md:p-6">
-                      <span className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary/80">
-                      </span>
-                      <span className="text-xl font-semibold text-white transition-colors group-hover:text-primary md:text-2xl">
+                    <span className="flex min-w-0 flex-1 flex-col justify-center p-3 sm:p-4 md:p-5">
+                      <span className="text-base font-semibold text-white transition-colors group-hover:text-primary sm:text-lg md:text-xl">
                         {skill.title}
                       </span>
-                      <span className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
+                      <span className="mt-1.5 max-w-2xl text-xs leading-relaxed text-gray-400 sm:text-sm">
                         {skill.description}
                       </span>
                     </span>
                   </span>
                 </AccordionTrigger>
 
-                <AccordionContent className="px-5 pb-6 pt-0 md:ml-64 md:px-6">
-                  <div className="border-t border-zinc-800 pt-5">
-                    <div className="flex flex-wrap gap-2">
+                <AccordionContent className="ml-24 px-3 pb-5 pt-0 sm:ml-36 sm:px-4 md:ml-44 md:px-5">
+                  <div className="border-t border-zinc-800 pt-4">
+                    <div className="flex flex-wrap gap-1.5">
                       {skill.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 text-xs font-medium text-gray-300 bg-zinc-800/50 rounded-full border border-zinc-700/50 hover:border-primary/50 hover:text-primary hover:bg-zinc-800 transition-colors"
+                          className="px-2.5 py-1 text-xs font-medium text-gray-300 bg-zinc-800/50 rounded-full border border-zinc-700/50 hover:border-primary/50 hover:text-primary hover:bg-zinc-800 transition-colors"
                         >
                           {tech}
                         </span>
