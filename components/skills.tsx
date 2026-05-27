@@ -252,7 +252,7 @@ export default function Skills() {
         "Replication & Sharding",
         "Caching",
         "Database Migrations",
-        "Message Queues",
+        "Async Queues",
       ],
     },
     {
@@ -840,7 +840,7 @@ export default function Skills() {
                   </span>
                 </AccordionTrigger>
 
-                <AccordionContent className="ml-24 px-3 pb-5 pt-0 sm:ml-36 sm:px-4 md:ml-44 md:px-5">
+                <AccordionContent className="px-3 pb-5 pt-0 sm:px-4 md:px-5">
                   <div className="border-t border-zinc-800 pt-4">
                     <div className="flex flex-wrap gap-1.5">
                       {skill.technologies.map((tech) => (
