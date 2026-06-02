@@ -2,7 +2,7 @@ import { unstable_cache } from "next/cache";
 import { NextResponse } from "next/server";
 
 const GITHUB_GRAPHQL_ENDPOINT = "https://api.github.com/graphql";
-const CACHE_SECONDS = 60 * 60 * 6;
+const CACHE_SECONDS = 60 * 60 * 1;
 
 const ACCOUNTS = [
   {
