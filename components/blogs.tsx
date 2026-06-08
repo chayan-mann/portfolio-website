@@ -109,6 +109,20 @@ export default function Blogs() {
         "System Design",
       ],
     },
+     {
+      title: "Why Database Indexes Are Fast: Understanding Pages, Disk I/O, and B+ Trees",
+      description:
+        "Understanding the storage-engine concepts behind database indexes: pages, clustered indexes, B+ trees, fan-out, and disk access patterns.",
+      url: "https://medium.com/@chayanmann09/why-database-indexes-are-fast-understanding-pages-disk-i-o-and-b-trees-bb2bcf4b061e",
+      date: "8th June 2026",
+      readTime: "6 min read",
+      tags: [
+        "Backend",
+        "Database Internals",
+        "Database Indexes",
+        "B+ Trees",
+      ],
+    },
   ];
 
   return (
