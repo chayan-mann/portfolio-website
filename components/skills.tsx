@@ -452,6 +452,7 @@ export default function Skills() {
       ),
       technologies: [
         "Deep Learning & NLP",
+        "Data Pipelines & Preprocessing",
         "Computer Vision",
         "LLMs & RAG Systems",
         "LangChain and LangGraph",
@@ -462,7 +463,6 @@ export default function Skills() {
         "Model Training & Fine-tuning",
         "Agent Retries & Error Handling",
         "MLOps & Deployment",
-        "Open Source LLMs",
       ],
     },
     {
@@ -783,9 +783,13 @@ export default function Skills() {
         "Linux",
         "Networking",
         "Docker",
+        "AWS",
+        "GitHub Actions",
         "CI/CD pipeline",
         "Bash/Shell scripting",
-        "AWS",
+        "Monitoring & Observability",
+        "GCP",
+
       ],
     },
   ];
