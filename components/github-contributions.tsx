@@ -220,7 +220,7 @@ export default function GitHubContributions() {
   }, [data]);
 
   return (
-    <section id="github" className="bg-black py-20 md:py-28">
+    <section id="github-contributions" className="bg-black py-20 md:py-28">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-10 flex max-w-4xl flex-col items-center text-center">
