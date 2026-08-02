@@ -2,7 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Home, Briefcase, Code, Mail, Github, BookOpen } from "lucide-react";
+import {
+  Home,
+  Briefcase,
+  Code,
+  Mail,
+  Github,
+  BookOpen,
+  Building2,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { ThemeToggle } from "../components/theme-toggle";
@@ -26,6 +34,7 @@ export default function Navbar() {
 
   const desktopNavLinks = [
     { name: "Home", href: "/#home" },
+    { name: "Experience", href: "/#experience" },
     { name: "Skills", href: "/#skills" },
     { name: "Projects", href: "/#projects" },
     { name: "Blogs", href: "/blogs" },
@@ -33,6 +42,7 @@ export default function Navbar() {
 
   const mobileNavLinks = [
     { name: "Home", href: "/#home", icon: Home },
+    { name: "Experience", href: "/#experience", icon: Building2 },
     { name: "Projects", href: "/#projects", icon: Briefcase },
     { name: "Blogs", href: "/blogs", icon: BookOpen },
     {
