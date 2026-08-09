@@ -11,6 +11,7 @@ export default function About() {
           <div className="relative aspect-square w-48 sm:w-64 md:w-80 lg:w-96 mx-auto overflow-hidden">
             <Image src="/images/profile.jpeg" alt="Profile" fill className="object-cover" priority />
           </div>
+          
             <div>
               <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
               <p className="text-muted-foreground mb-6">
