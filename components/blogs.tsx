@@ -109,7 +109,7 @@ export default function Blogs() {
         "System Design",
       ],
     },
-     {
+    {
       title: "Why Database Indexes Are Fast: Understanding Pages, Disk I/O, and B+ Trees",
       description:
         "Understanding the storage-engine concepts behind database indexes: pages, clustered indexes, B+ trees, fan-out, and disk access patterns.",
@@ -121,6 +121,20 @@ export default function Blogs() {
         "Database Internals",
         "Database Indexes",
         "B+ Trees",
+      ],
+    },
+    {
+      title: "I Distilled GPT-6 Luna into a 1.5B Model on My MacBook. Here's What Broke",
+      description:
+        "Fine-tune a tiny model (0.5B–1.5B) to replace a big-model + long-prompt classification/extraction pipeline via distillation.",
+      url: "https://medium.com/@chayanmann09/i-distilled-gpt-6-luna-into-a-1-5b-model-on-my-macbook-heres-what-broke-b0a38bb68854",
+      date: "29th Sept 2026",
+      readTime: "8 min read",
+      tags: [
+        "LLM",
+        "Machine Learning",
+        "Knowledge Distillation",
+        "Machine Learning",
       ],
     },
   ];
