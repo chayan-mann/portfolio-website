@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { ThemeToggle } from "../components/theme-toggle";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -84,7 +83,6 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-3/4 transition-all duration-300"></span>
               </Link>
             ))}
-            {/* <ThemeToggle /> */}
           </nav>
         </div>
       </header>

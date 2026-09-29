@@ -47,7 +47,7 @@ export default function RootLayout({
         <link rel="icon" href="/portfolio.jpeg" type="image/jpeg" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
