@@ -100,24 +100,24 @@ export default function Hero() {
                   <DropdownMenuContent align="center" className="w-48">
                     <DropdownMenuItem asChild className="cursor-pointer">
                       <a
-                        href="https://drive.google.com/file/d/1uxazMTSvAZU4OBbpLezpSjUIMZ6m90rk/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1c1dE9787CFmT5bz9Y79QSta2SzEmzkXI/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center"
                       >
                         <Code className="mr-2 h-4 w-4" />
-                        <span>Web Dev Resume</span>
+                        <span>SDE/Backend Resume</span>
                       </a>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild className="cursor-pointer">
                       <a
-                        href="https://drive.google.com/file/d/1uxazMTSvAZU4OBbpLezpSjUIMZ6m90rk/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1LtwvwhFaA10LzLj8grthoSlUaa8FaEKF/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center"
                       >
                         <Bot className="mr-2 h-4 w-4" />
-                        <span>ML Resume</span>
+                        <span>AI Engineer Resume</span>
                       </a>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
